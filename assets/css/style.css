@@ -1,0 +1,5 @@
+/* Ví dụ đơn giản */
+body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+header { background: #001a4d; color: white; padding: 1rem; }
+header a { color: white; margin-right: 15px; }
+main { max-width: 800px; margin: auto; }
