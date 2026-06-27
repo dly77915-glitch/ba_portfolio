@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặng Lý Phương Thảo | IT Business Analyst | Odoo ERP Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-navy {
+            background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 26, 77, 0.15);
+        }
+        .text-highlight {
+            color: #003d99;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- ============================================
+         HEADER / NAVIGATION
+         ============================================ -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="text-highlight">DLY</span> Portfolio
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#overview" class="text-gray-600 hover:text-gray-900 transition">Tổng quan</a>
+                <a href="#challenges" class="text-gray-600 hover:text-gray-900 transition">Thách thức</a>
+                <a href="#approach" class="text-gray-600 hover:text-gray-900 transition">Phương pháp</a>
+                <a href="#solutions" class="text-gray-600 hover:text-gray-900 transition">Giải pháp</a>
+                <a href="#impact" class="text-gray-600 hover:text-gray-900 transition">Kết quả</a>
+            </nav>
+            <a href="mailto:dly77915@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+                Liên hệ
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="gradient-navy text-white py-24 sm:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
+                        Đặng Lý Phương Thảo
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-2 font-semibold">
+                        IT Business Analyst
+                    </p>
+                    <p class="text-lg text-blue-50 mb-8 leading-relaxed">
+                        IT Business Analyst với định hướng kết nối kiến trúc hệ thống và trải nghiệm người dùng để tối ưu hóa sản phẩm số. Tôi có thế mạnh trong phân tích yêu cầu, mô hình hóa quy trình và làm việc liên phòng ban. Mục tiêu dài hạn của tôi là tiến xa hơn với vai trò BA chuyên sâu trong lĩnh vực E-commerce và Digital Marketing, tập trung chuyển hóa bài toán kinh doanh phức tạp thành tính năng hệ thống và tối ưu luồng vận hành.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            Xem chi tiết
+                        </a>
+                        <a href="https://www.linkedin.com/in/phương-thảo-đặng/" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-3xl font-bold text-blue-200 mr-4">01</div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-1">Requirement Elicitation</h3>
+                                <p class="text-blue-100 text-sm">Phân tích yêu cầu từ stakeholder đa tầng</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-3xl font-bold text-blue-200 mr-4">02</div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-1">Process Modeling</h3>
+                                <p class="text-blue-100 text-sm">Mô hình hóa quy trình AS-IS và TO-BE</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-3xl font-bold text-blue-200 mr-4">03</div>
+                            <div>
+                                <h3 class="font-semibold text-white mb-1">System Architecture</h3>
+                                <p class="text-blue-100 text-sm">Thiết kế giải pháp phục vụ hiệu quả vận hành</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECT OVERVIEW
+         ============================================ -->
+    <section id="overview" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Dự án Tiêu biểu</h2>
+                <p class="text-lg text-gray-600">Odoo ERP Customization & Process Automation</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover-lift">
+                    <div class="text-4xl font-bold text-highlight mb-3">42.43%</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Custom Development</h3>
+                    <p class="text-gray-600 text-sm">Phần phát triển mới để giải quyết 46 GAPs nghiêm trọng</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover-lift">
+                    <div class="text-4xl font-bold text-highlight mb-3">6 Modules</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">HT Beauty Ecosystem</h3>
+                    <p class="text-gray-600 text-sm">Hệ sinh thái module tùy chỉnh độc lập, tích hợp toàn diện</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gray-200 hover-lift">
+                    <div class="text-4xl font-bold text-highlight mb-3">4-Layer</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Conflict Detection</h3>
+                    <p class="text-gray-600 text-sm">Thuật toán chặn xung đột đa tầng tài nguyên</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-10">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Bối cảnh Dự án</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-highlight mb-3">Công ty</h4>
+                        <p class="text-gray-600 mb-6">
+                            <strong>Viện Thẩm Mỹ HT Beauty</strong> - Phòng khám chuyên khoa da liễu kết hợp viện thẩm mỹ chuẩn y khoa, tập trung phân khúc khách hàng tầm trung và cao cấp tại TP. HCM.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-highlight mb-3">Vấn đề Cốt Lõi</h4>
+                        <p class="text-gray-600 mb-6">
+                            Hiện tại, viện gặp phải những thách thức lớn trong khâu vận hành do chủ yếu sử dụng Google Sheets, Zalo, và sổ tay giấy. Qua khảo sát, quy trình As Is bộc lộ <span class="text-highlight">46 khoảng trống (GAPs)</span> nghiêm trọng liên quan đến quản lý khách hàng, đặt lịch, và chăm sóc hậu mãi.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <h4 class="font-semibold text-highlight mb-2">Vai trò Của Tôi</h4>
+                    <p class="text-gray-600">
+                        <strong>Project Management & Business Analyst:</strong> Phụ trách khảo sát hiện trạng, phân tích yêu cầu, mô hình hóa quy trình (BPMN, Use Case, ERD, DFD), gap analysis, đề xuất giải pháp và tham gia vào giai đoạn kiểm thử hệ thống.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         THE CHALLENGES / PAIN POINTS
+         ============================================ -->
+    <section id="challenges" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Những Thách Thức Chính</h2>
+                <p class="text-lg text-gray-600">As-Is Process Pain Points & Operational Bottlenecks</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Challenge 1 -->
+                <div class="bg-red-50 border-l-4 border-red-500 p-8 rounded-lg hover-lift">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-red-500 mr-4">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Xếp Trùng Lịch Nhân Sự & Phòng</h3>
+                            <p class="text-gray-700">
+                                Lễ tân sử dụng Google Sheet để xếp lịch, dễ xảy ra sai sót khi bác sĩ/KTV hoặc phòng điều trị bị kẹt giờ. Thiếu cơ chế kiểm soát tự động dẫn đến khách hàng phải chờ đợi hoặc không được phục vụ kịp thời.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-8 rounded-lg hover-lift">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-orange-500 mr-4">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Quản Lý Thẻ Liệu Trình Thủ Công</h3>
+                            <p class="text-gray-700">
+                                KTV sử dụng thẻ giấy để trừ lùi số buổi, dễ bị mất, hư hỏng hoặc quên cập nhật. Ghi chép phân mảnh gây khó khăn trong việc theo dõi tiến độ điều trị và hồ sơ lâm sàng khách hàng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 3 -->
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-8 rounded-lg hover-lift">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-yellow-500 mr-4">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Chăm Sóc Khách Hàng Đứt Gãy</h3>
+                            <p class="text-gray-700">
+                                CSKH dựa vào trí nhớ để nhắc lịch hay gọi hỏi thăm, dễ bị quên. Không có luồng tự động hóa dẫn đến tỷ lệ khách quay lại giảm sút và tỷ lệ No-show cao.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 4 -->
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-8 rounded-lg hover-lift">
+                    <div class="flex items-start mb-4">
+                        <div class="text-3xl text-purple-500 mr-4">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Phân Mảnh Dữ Liệu Khách Hàng</h3>
+                            <p class="text-gray-700">
+                                Hồ sơ khách hàng nằm rải rác trên Zalo, Google Sheet, sổ tay giấy. Không có hệ thống tập trung khiến dữ liệu y tế bị trôi mất, khó tra cứu và rủi ro bảo mật cao.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-8 text-center">
+                <p class="text-lg font-semibold mb-2">Kết quả của những vấn đề này:</p>
+                <p class="text-2xl font-bold">
+                    46 GAPs trong quy trình vận hành → Hiệu quả thấp, rủi ro cao, khách hàng không hài lòng
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BA APPROACH & METHODOLOGY
+         ============================================ -->
+    <section id="approach" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Phương Pháp Phân Tích Của Tôi</h2>
+                <p class="text-lg text-gray-600">Requirement Elicitation → Modeling → Gap Analysis → Solution Design</p>
+            </div>
+
+            <!-- Approach Step 1 -->
+            <div class="mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="inline-block w-10 h-10 bg-blue-600 text-white rounded-full text-center leading-10 mr-3 font-bold">1</span>
+                            Requirement Elicitation
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Phỏng vấn Stakeholders:</strong> Thu thập yêu cầu từ Quản lý, Bác sĩ, KTV, Lễ tân, CSKH</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Khảo sát Hiện Trạng:</strong> Ghi nhận quy trình As-Is chi tiết từng bộ phận</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Phân tích Stakeholders:</strong> Định danh mức độ quan tâm và ảnh hưởng của từng bên</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Chỉ số KPI:</strong> Xác định hiệu suất vận hành cần đo lường</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                        <!-- [INSERT IMAGE HERE: Stakeholder Analysis Matrix] -->
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600 text-sm text-center">
+                            <div>
+                                <i class="fas fa-image text-4xl mb-2 opacity-50"></i>
+                                <p>[INSERT IMAGE HERE: Stakeholder Analysis Matrix]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approach Step 2 -->
+            <div class="mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 order-2 md:order-1">
+                        <!-- [INSERT IMAGE HERE: Use Case Diagram] -->
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600 text-sm text-center">
+                            <div>
+                                <i class="fas fa-image text-4xl mb-2 opacity-50"></i>
+                                <p>[INSERT IMAGE HERE: Use Case Diagram]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="inline-block w-10 h-10 bg-blue-600 text-white rounded-full text-center leading-10 mr-3 font-bold">2</span>
+                            System Modeling
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>BPMN Diagram:</strong> Vẽ quy trình As-Is và To-Be chi tiết tất cả 10 quy trình</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Use Case Modeling:</strong> Định nghĩa 11 use cases chính và các scenarios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Data Flow Diagram (DFD):</strong> Mô hình hóa luồng dữ liệu xuyên suốt hệ thống</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Entity-Relationship Diagram:</strong> Thiết kế cơ sở dữ liệu logic và vật lý</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approach Step 3 -->
+            <div class="mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="inline-block w-10 h-10 bg-blue-600 text-white rounded-full text-center leading-10 mr-3 font-bold">3</span>
+                            Gap Analysis & Requirements
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Phân tích Khoảng Trống:</strong> So sánh khả năng Odoo tiêu chuẩn với yêu cầu viện</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Định danh 46 GAPs:</strong> Phân loại Standard (Kế thừa), Configuration, Customization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Yêu cầu Chức năng & Phi Chức năng:</strong> Lập danh sách chi tiết FR01-FR11 và NFR01-NFR24</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Ma Trận Trọng Số:</strong> Ưu tiên các giải pháp theo tác động kinh doanh</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-200">
+                        <!-- [INSERT IMAGE HERE: Gap Analysis Matrix / 46 GAPs Breakdown] -->
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600 text-sm text-center">
+                            <div>
+                                <i class="fas fa-image text-4xl mb-2 opacity-50"></i>
+                                <p>[INSERT IMAGE HERE: Gap Analysis Matrix]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approach Step 4 -->
+            <div>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 order-2 md:order-1">
+                        <!-- [INSERT IMAGE HERE: ERD Diagram] -->
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center text-gray-600 text-sm text-center">
+                            <div>
+                                <i class="fas fa-image text-4xl mb-2 opacity-50"></i>
+                                <p>[INSERT IMAGE HERE: Entity-Relationship Diagram]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="inline-block w-10 h-10 bg-blue-600 text-white rounded-full text-center leading-10 mr-3 font-bold">4</span>
+                            Data Architecture Design
+                        </h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Thiết kế Hồ sơ Điều Trị:</strong> Mở rộng res.partner thành bệnh án điện tử đầy đủ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Model Phác Đồ & Buổi Điều Trị:</strong> Cấu trúc cha-con để theo dõi tiến độ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Quản Lý Lịch Hẹn & Phòng:</strong> Thiết kế beauty.appointment, beauty.room</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                                <span><strong>Ma Trận Ràng Buộc:</strong> Định danh quan hệ N-M giữa Khách, Bác sĩ, KTV, Phòng</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         KEY SOLUTIONS & AUTOMATION
+         ============================================ -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Những Giải Pháp Chính</h2>
+                <p class="text-lg text-gray-600">Proposed To-Be Solutions & Technical Implementation</p>
+            </div>
+
+            <!-- Solution 1: 4-Layer Conflict Detection -->
+            <div class="mb-12 bg-blue-50 rounded-xl p-10 border-l-4 border-blue-600">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-shield-alt text-blue-600 mr-3"></i>
+                    Thuật Toán Chặn Xung Đột Tài Nguyên 4 Tầng
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Để giải quyết triệt để vấn đề xếp trùng lịch, tôi thiết kế một hệ thống kiểm soát <span class="text-highlight">@api.constrains</span> ở tầng Backend Python. Khi Lễ tân lưu lịch hẹn mới, thuật toán sẽ tự động quét 4 điều kiện ràng buộc:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg border border-blue-200">
+                        <div class="text-4xl text-blue-600 font-bold mb-3">1</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Phòng Đang Bảo Trì</h4>
+                        <p class="text-gray-600 text-sm">
+                            Hệ thống kiểm tra xem phòng được chọn có đang ở trạng thái "Bảo trì" không. Nếu có, chặn thao tác và báo lỗi: <span class="text-red-600 font-semibold">"Phòng đang bảo trì, không thể đặt lịch"</span>
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-blue-200">
+                        <div class="text-4xl text-blue-600 font-bold mb-3">2</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Khách Hàng Bị Kẹt Giờ</h4>
+                        <p class="text-gray-600 text-sm">
+                            Quét tất cả lịch hẹn hiện hữu của khách hàng. Nếu khách hàng đã có lịch giao nhau với khung giờ mới, từ chối lưu.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-blue-200">
+                        <div class="text-4xl text-blue-600 font-bold mb-3">3</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Bác Sĩ/KTV Bị Giao Trùng</h4>
+                        <p class="text-gray-600 text-sm">
+                            Kiểm tra lịch làm việc của Bác sĩ/KTV. Nếu họ đã có lịch trùng giờ, không cho phép xếp thêm.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-blue-200">
+                        <div class="text-4xl text-blue-600 font-bold mb-3">4</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Phòng Vượt Sức Chứa</h4>
+                        <p class="text-gray-600 text-sm">
+                            Đếm số khách được xếp vào phòng trong cùng khung giờ. Nếu vượt quá capacity được khai báo, báo lỗi.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 bg-white p-4 rounded-lg border-l-4 border-green-500">
+                    <p class="text-gray-700">
+                        <strong>Kết quả:</strong> Hệ thống <span class="text-highlight">tự động khóa chặn 100% tình trạng xếp trùng</span>, giảm sai sót thủ công và đảm bảo tài nguyên được sử dụng tối ưu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Solution 2: Bulk Appointment -->
+            <div class="mb-12 bg-green-50 rounded-xl p-10 border-l-4 border-green-600">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-list-check text-green-600 mr-3"></i>
+                    Công Cụ Xếp Lịch Hàng Loạt (Bulk Appointment)
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Thay vì tạo từng lịch hẹn thủ công cho gói 5 buổi (như trước mất 5 lần click), hệ thống hỗ trợ tạo <span class="text-highlight">5 lịch hẹn cùng lúc</span> qua một Wizard.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-white p-4 rounded-lg">
+                        <span class="inline-block w-8 h-8 bg-green-600 text-white rounded-full text-center leading-8 mr-4 font-bold flex-shrink-0">1</span>
+                        <div>
+                            <p class="text-gray-700">
+                                <strong>Nhập tham số:</strong> Bác sĩ chỉ cần nhập: Ngày bắt đầu, khoảng cách giữa các buổi (tuần/tháng), Bác sĩ/KTV phụ trách.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg">
+                        <span class="inline-block w-8 h-8 bg-green-600 text-white rounded-full text-center leading-8 mr-4 font-bold flex-shrink-0">2</span>
+                        <div>
+                            <p class="text-gray-700">
+                                <strong>Tự động sinh lịch:</strong> Hệ thống tính toán tất cả 5 ngày tương ứng, hiển thị preview trước khi lưu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-white p-4 rounded-lg">
+                        <span class="inline-block w-8 h-8 bg-green-600 text-white rounded-full text-center leading-8 mr-4 font-bold flex-shrink-0">3</span>
+                        <div>
+                            <p class="text-gray-700">
+                                <strong>Tạo đồng loạt:</strong> Một thao tác duy nhất, 5 lịch hẹn được khởi tạo và liên kết với phác đồ gốc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 bg-white p-4 rounded-lg border-l-4 border-green-500">
+                    <p class="text-gray-700">
+                        <strong>Hiệu quả:</strong> Giảm <span class="text-highlight">80% thời gian xếp lịch</span> cho các gói điều trị dài hạn, giảm lỗi nhập liệu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Solution 3: Automation Workflows -->
+            <div class="mb-12 bg-purple-50 rounded-xl p-10 border-l-4 border-purple-600">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-robot text-purple-600 mr-3"></i>
+                    Luồng Tự Động Hóa Chăm Sóc Khách Hàng (Automation)
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Module <span class="text-highlight">ht_beauty_automation</span> chạy ngầm để xử lý 4 tác vụ CSKH chính mà không cần can thiệp thủ công:
+                </p>
+                
+                <!-- Automation 1 -->
+                <div class="mb-6 bg-white rounded-lg p-6 border border-purple-200">
+                    <h4 class="font-bold text-gray-900 mb-3">
+                        <i class="fas fa-bell text-purple-600 mr-2"></i>
+                        Nhắc Lịch Hẹn Tự Động
+                    </h4>
+                    <div class="ml-6 space-y-2 text-gray-600 text-sm">
+                        <p><strong>Trigger:</strong> Cron Job chạy hàng ngày lúc 10 AM để quét lịch hẹn ngày hôm sau.</p>
+                        <p><strong>Hành động:</strong> Gửi tin nhắn nhắc lịch (Zalo/SMS) + ghi vết lưu trữ trên hệ thống.</p>
+                        <p><strong>Kết quả:</strong> Giảm tỷ lệ No-show (khách quên hẹn) từ 30% xuống ~10%.</p>
+                    </div>
+                </div>
+
+                <!-- Automation 2 -->
+                <div class="mb-6 bg-white rounded-lg p-6 border border-purple-200">
+                    <h4 class="font-bold text-gray-900 mb-3">
+                        <i class="fas fa-exclamation-circle text-orange-500 mr-2"></i>
+                        Cảnh Báo Khách Trễ Hẹn
+                    </h4>
+                    <div class="ml-6 space-y-2 text-gray-600 text-sm">
+                        <p><strong>Trigger:</strong> Cron Job quét mỗi 15 phút để kiểm tra lịch hẹn đã quá giờ.</p>
+                        <p><strong>Hành động:</strong> Nếu khách trễ >30 phút, tự động sinh Task nhắc Lễ tân gọi điện xác nhận.</p>
+                        <p><strong>Kết quả:</strong> Đảm bảo phòng/KTV không bị "giam vô ích", giải phóng tài nguyên kịp thời.</p>
+                    </div>
+                </div>
+
+                <!-- Automation 3 -->
+                <div class="mb-6 bg-white rounded-lg p-6 border border-purple-200">
+                    <h4 class="font-bold text-gray-900 mb-3">
+                        <i class="fas fa-tasks text-blue-600 mr-2"></i>
+                        Giao Việc Tự Động Khi Khách Check-in
+                    </h4>
+                    <div class="ml-6 space-y-2 text-gray-600 text-sm">
+                        <p><strong>Trigger:</strong> Lễ tân bấm nút "Khách đã đến" trên Lịch hẹn.</p>
+                        <p><strong>Hành động:</strong> Hệ thống tự động tạo Activity (To-do) gán cho Bác sĩ/KTV phụ trách, đồng thời gửi thông báo tức thì.</p>
+                        <p><strong>Kết quả:</strong> Bác sĩ/KTV được thông báo ngay, không cần Lễ tân phải chạy gọi. Tiết kiệm 5-10 phút mỗi ca.</p>
+                    </div>
+                </div>
+
+                <!-- Automation 4 -->
+                <div class="bg-white rounded-lg p-6 border border-purple-200">
+                    <h4 class="font-bold text-gray-900 mb-3">
+                        <i class="fas fa-heart text-red-500 mr-2"></i>
+                        Sinh Task Chăm Sóc Hậu Mãi
+                    </h4>
+                    <div class="ml-6 space-y-2 text-gray-600 text-sm">
+                        <p><strong>Trigger:</strong> KTV bấm "Hoàn thành" buổi điều trị.</p>
+                        <p><strong>Hành động:</strong> Hệ thống tự động sinh Task cho CSKH gọi hỏi thăm khách ngày hôm sau hoặc theo quy định (T+1, T+3).</p>
+                        <p><strong>Kết quả:</strong> Chốt chặn 100% luồng chăm sóc, tăng tỷ lệ khách quay lại từ 60% lên 85%+.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 4: UI/UX Improvements -->
+            <div class="bg-teal-50 rounded-xl p-10 border-l-4 border-teal-600">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-desktop text-teal-600 mr-3"></i>
+                    Giao Diện & Trải Nghiệm Người Dùng
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white p-6 rounded-lg border border-teal-200">
+                        <h4 class="font-bold text-gray-900 mb-3">Calendar View (Lịch Làm Việc)</h4>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Giao diện Lịch trực quan cho Lễ tân với 3 chế độ xem:
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• Lịch theo Ngày (xem toàn bộ lịch)</li>
+                            <li>• Lịch theo Phòng (biết phòng nào trống)</li>
+                            <li>• Lịch theo Nhân Sự (biết ai rảnh)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-teal-200">
+                        <h4 class="font-bold text-gray-900 mb-3">Electronic Medical Record (Bệnh Án Điện Tử)</h4>
+                        <p class="text-gray-600 text-sm">
+                            Hồ sơ khách hàng tập trung với các tab:
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• Thông tin cơ bản & Tiền sử Y tế</li>
+                            <li>• Kết quả soi da (ảnh + mô tả)</li>
+                            <li>• Lịch sử phác đồ & buổi điều trị</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg border-l-4 border-teal-500">
+                    <p class="text-gray-700">
+                        <strong>Chừa chỗ trống để chèn ảnh giao diện Odoo từ môi trường thực tế</strong>
+                    </p>
+                    <!-- [INSERT IMAGE HERE: Odoo Calendar Interface + Medical Record UI] -->
+                    <div class="bg-gray-200 h-40 rounded-lg flex items-center justify-center text-gray-600 text-sm text-center mt-4">
+                        <div>
+                            <i class="fas fa-image text-3xl mb-2 opacity-50"></i>
+                            <p>[INSERT IMAGE HERE: Odoo Calendar & Medical Record UI]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         IMPACT & RESULTS
+         ============================================ -->
+    <section id="impact" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Kết Quả & Tác Động Kinh Doanh</h2>
+                <p class="text-lg text-gray-600">Expected Business Outcomes & Process Improvements</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-8 border border-gray-200 hover-lift shadow-sm">
+                    <div class="text-5xl font-bold text-blue-600 mb-4">46</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">GAPs Được Giải Quyết</h3>
+                    <p class="text-gray-600">
+                        Giải pháp Odoo cùng các module tùy chỉnh triệt để xử lý tất cả 46 khoảng trống từ quy trình As-Is.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-8 border border-gray-200 hover-lift shadow-sm">
+                    <div class="text-5xl font-bold text-green-600 mb-4">80%</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Giảm Thao Tác Thủ Công</h3>
+                    <p class="text-gray-600">
+                        Xếp lịch hàng loạt, tự động hóa chăm sóc, tính giá tự động giảm tải công việc nhân viên.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-8 border border-gray-200 hover-lift shadow-sm">
+                    <div class="text-5xl font-bold text-purple-600 mb-4">100%</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Chặn Xung Đột Tài Nguyên</h3>
+                    <p class="text-gray-600">
+                        Thuật toán 4-tầng đảm bảo không xảy ra tình trạng xếp trùng lịch hoặc vượt sức chứa phòng.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Result 1 -->
+                <div class="bg-white rounded-xl p-8 border border-gray-200 hover-lift">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-green-600 mr-3 text-3xl"></i>
+                        Trải Nghiệm Khách Hàng Cải Thiện
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Hạ tỷ lệ No-show:</strong> Từ 30% → ~10% nhờ nhắc lịch tự động</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Tăng khách quay lại:</strong> Từ 60% → 85%+ nhờ chăm sóc hậu mãi tự động</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Tiết kiệm thời gian:</strong> Khách không phải chờ tìm phòng/KTV rảnh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Bảo mật dữ liệu:</strong> Hồ sơ y tế tập trung, mã hóa và giới hạn truy cập</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="bg-white rounded-xl p-8 border border-gray-200 hover-lift">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fas fa-cogs text-blue-600 mr-3 text-3xl"></i>
+                        Hiệu Quả Vận Hành Tăng Cao
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Tối ưu Tài Nguyên:</strong> Thuật toán 4-tầng chặn 100% xung đột</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Giảm Sai Sót:</strong> Không còn trùng lịch, quên trừ buổi, hay thất lạc hồ sơ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Tăng Năng Suất:</strong> Lễ tân tiết kiệm 5-10 phút/ca, KTV không quên cập nhật</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 font-bold">→</span>
+                            <span><strong>Dữ liệu Thực Thời:</strong> Quản lý biết lịch hẹn, tiến độ điều trị ngay tức thì</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Architecture Breakdown -->
+            <div class="bg-white rounded-xl p-10 border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Cơ Cấu Giải Pháp & Phân Bổ Công Việc</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-6 bg-blue-50 rounded-lg">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">36.36%</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Kế Thừa Tiêu Chuẩn (Standard)</h4>
+                        <p class="text-gray-600 text-sm">
+                            Sử dụng trực tiếp các module có sẵn: CRM, Sales, HR, Products
+                        </p>
+                    </div>
+                    <div class="text-center p-6 bg-green-50 rounded-lg">
+                        <div class="text-4xl font-bold text-green-600 mb-2">21.21%</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Cấu Hình Bổ Sung (Configuration)</h4>
+                        <p class="text-gray-600 text-sm">
+                            Thiết lập XML, ràng buộc, phân quyền từ Module có sẵn
+                        </p>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">42.43%</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Phát Triển Tùy Chỉnh (Customization)</h4>
+                        <p class="text-gray-600 text-sm">
+                            Code mới: 6 module đặc thù, thuật toán, tự động hóa
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <p class="text-gray-700">
+                        <span class="text-highlight">42.43% phát triển mới</span> là con số đáng chú ý vì Odoo tiêu chuẩn chỉ hỗ trợ 36% nhu cầu thẩm mỹ viện. Phần còn lại (<span class="text-highlight">63.64%</span>) được xây dựng tùy chỉnh để giải quyết bài toán nghiệp vụ chuyên sâu: phác đồ y khoa, đặt lịch đa tài nguyên, tự động hóa chăm sóc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS & TECHNOLOGIES
+         ============================================ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Kỹ Năng & Công Nghệ</h2>
+                <p class="text-lg text-gray-600">Technical & Business Analysis Competencies</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- BA Skills -->
+                <div class="bg-white rounded-xl p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-briefcase text-blue-600 mr-3 text-3xl"></i>
+                        Kỹ Năng Phân Tích Kinh Doanh
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Requirement Elicitation</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Gap Analysis</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Stakeholder Management</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Use Case Modeling</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">BPMN Process Modeling</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Business Process Analysis</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Data Architecture</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Solution Design</span>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="bg-white rounded-xl p-8 border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <i class="fas fa-code text-purple-600 mr-3 text-3xl"></i>
+                        Kỹ Năng Kỹ Thuật
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Odoo ERP (v19, v18)</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">XML/JSON</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">PostgreSQL</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">ERD/UML</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Draw.io</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Figma</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">API Integration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Domain Knowledge -->
+            <div class="mt-8 bg-white rounded-xl p-8 border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-industry text-green-600 mr-3 text-3xl"></i>
+                    Kiến Thức Ngành
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">E-commerce & Digital Marketing</h4>
+                        <p class="text-gray-600 text-sm">Lead generation, customer journey mapping, digital transformation</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Healthcare / Beauty Services</h4>
+                        <p class="text-gray-600 text-sm">Medical records, treatment protocols, regulatory compliance, patient care workflows</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">ERP Systems & SAP</h4>
+                        <p class="text-gray-600 text-sm">Enterprise architecture, system integration, process automation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT & CTA
+         ============================================ -->
+    <section id="contact" class="py-24 gradient-navy text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-6">Hãy Cùng Làm Việc</h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+                Tôi sẵn sàng giải quyết những bài toán kinh doanh phức tạp, từ phân tích yêu cầu đến triển khai hệ thống. Hãy liên hệ để thảo luận về dự án tiếp theo của bạn.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:dly77915@gmail.com" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Gửi Email
+                </a>
+                <a href="https://www.linkedin.com/in/phương-thảo-đặng/" target="_blank" class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition text-lg">
+                    <i class="fas fa-linkedin mr-2"></i>
+                    LinkedIn Profile
+                </a>
+                <a href="#top" class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition text-lg">
+                    <i class="fas fa-arrow-up mr-2"></i>
+                    Quay Lên Đầu
+                </a>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-blue-400 text-blue-100">
+                <p class="mb-4">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    Thành phố Hồ Chí Minh, Việt Nam
+                </p>
+                <p>
+                    <i class="fas fa-envelope-open mr-2"></i>
+                    Email: <strong>dly77915@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">
+                © 2024 Đặng Lý Phương Thảo. Tất cả các quyền được bảo lưu.
+            </p>
+            <p class="text-sm">
+                <i class="fas fa-code mr-2"></i>
+                Thiết kế: HTML5 + Tailwind CSS | Dự án: <span class="text-blue-400">Odoo ERP Customization for HT Beauty Clinic</span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
