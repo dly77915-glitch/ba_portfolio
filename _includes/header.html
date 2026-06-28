@@ -1,7 +1,20 @@
-<header>
-    <nav>
-        <a href="/">Trang chủ</a>
-        <a href="/projects/project-1.html">Dự án 1: Odoo ERP</a>
-        <a href="/projects/project-2.html">Dự án 2: E-commerce</a>
-    </nav>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">DLY Portfolio</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}#hero">Tổng quan</a></li>
+                <li><a href="{{ '/' | relative_url }}#about">Về mình</a></li>
+                <li><a href="{{ '/' | relative_url }}#skills">Kỹ năng</a></li>
+                <li><a href="{{ '/' | relative_url }}#projects">Dự án</a></li>
+                <li><a href="{{ '/' | relative_url }}#certs">Chứng nhận</a></li>
+                <li><a href="{{ '/' | relative_url }}#documents">Góc tài liệu</a></li>
+            </ul>
+        </nav>
+        <div class="lang-toggle">
+            <button id="lang-switch">[ Tiếng Việt | English ]</button>
+        </div>
+    </div>
 </header>

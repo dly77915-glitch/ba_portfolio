@@ -1,14 +1,115 @@
 ---
 layout: default
-title: Home
 ---
-<h1>Chào mừng đến với Portfolio của tôi</h1>
-<p>Tôi là một BA sinh viên tại UEH...</p>
 
-<section class="projects">
-    <h2>Dự án tiêu biểu</h2>
-    <div class="card">
-        <h3>Dự án 1: Digital Marketing Analytics</h3>
-        <a href="/projects/project-1.html">Xem chi tiết</a>
-    </div>
-</section>
+<div class="container">
+    
+    <section id="hero" class="hero">
+        <div>
+            <h1>Xin chào, mình là Phương Thảo.</h1>
+            <p>Một sinh viên đang trên hành trình trở thành Business Analyst. Thế mạnh của mình nằm ở việc thu thập yêu cầu một cách logic, vẽ sơ đồ quy trình rõ ràng và làm cầu nối để đảm bảo giải pháp công nghệ thực sự giải quyết được bài toán vận hành của doanh nghiệp.</p>
+            <div class="hero-actions">
+                <button id="btn-view-cv" class="btn btn-primary">Xem CV</button>
+                <a href="#projects" class="btn btn-outline">Xem Dự án</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Về mình</h2>
+        <div class="about-grid">
+            <div class="about-img-placeholder">
+                [ Ảnh Cá Nhân ]
+            </div>
+            <div class="about-content">
+                <ul>
+                    <li><strong>Học vấn:</strong> Sinh viên năm 4 chuyên ngành Hệ thống hoạch định nguồn lực doanh nghiệp tại UEH.</li>
+                    <li><strong>Định hướng:</strong> E-commerce and Retails.</li>
+                    <li><strong>Tư duy làm việc:</strong> Thích sự rành mạch, làm việc có hệ thống, luôn đặt người dùng và giá trị kinh doanh làm trọng tâm khi phân tích bất kỳ giải pháp nào.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Kỹ năng cốt lõi</h2>
+        <div class="skills-list">
+            <div class="skill-category">
+                <h3>Phân tích nghiệp vụ</h3>
+                <p>Requirement Elicitation, Stakeholder Management, Gap Analysis, BRD, FSD.</p>
+            </div>
+            <div class="skill-category">
+                <h3>Thiết kế hệ thống</h3>
+                <p>BPMN, UML, ERD, DFD.</p>
+            </div>
+            <div class="skill-category">
+                <h3>Thiết kế giao diện</h3>
+                <p>Wireframing, High-Fidelity Mockups, User Journey Mapping.</p>
+            </div>
+            <div class="skill-category">
+                <h3>Dữ liệu & Công cụ</h3>
+                <p>Data Analysis, SQL, Agile/Scrum, Odoo ERP, Figma.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Hệ thống Odoo ERP cho HT Beauty</h3>
+                <p>Phân tích hệ thống hiện tại/tương lai và cấu hình Odoo để xử lý 46 điểm nghẽn trong vận hành.</p>
+                <a href="{{ '/projects/ht-beauty.html' | relative_url }}" class="btn btn-outline">Xem chi tiết</a>
+            </div>
+            <div class="project-card">
+                <h3>Nền tảng Đặt hàng Trà Anh</h3>
+                <p>Đặc tả yêu cầu, thiết kế kiến trúc dữ liệu và xây dựng bản thiết kế giao diện (Mockups).</p>
+                <a href="#" class="btn btn-outline">Xem chi tiết</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="certs">
+        <h2 class="section-title">Chứng nhận</h2>
+        <div class="empty-state-wrapper">
+            <div class="blurred-content">
+                <div class="folder-icon"></div>
+                <div class="folder-icon"></div>
+                <div class="folder-icon"></div>
+            </div>
+            <div class="empty-state-overlay">
+                <div class="empty-message">
+                    <span class="icon">🛠️</span>
+                    <p>Nội dung đang được hoàn thiện. Mình đang trong quá trình chọn lọc và chuẩn hóa dữ liệu tốt nhất để hiển thị tại đây. Vui lòng quay lại sau nhé!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documents">
+        <h2 class="section-title">Góc tài liệu (Deliverables)</h2>
+        <div class="empty-state-wrapper">
+            <div class="blurred-content">
+                <div>
+                    <div class="folder-icon"></div>
+                    <p>Sơ đồ luồng</p>
+                </div>
+                <div>
+                    <div class="folder-icon"></div>
+                    <p>Use Case</p>
+                </div>
+                <div>
+                    <div class="folder-icon"></div>
+                    <p>FSD</p>
+                </div>
+            </div>
+            <div class="empty-state-overlay">
+                <div class="empty-message">
+                    <span class="icon">⏳</span>
+                    <p>Nội dung đang được hoàn thiện. Mình đang trong quá trình chọn lọc và chuẩn hóa dữ liệu tốt nhất để hiển thị tại đây. Vui lòng quay lại sau nhé!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
