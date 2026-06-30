@@ -1,4 +1,5 @@
 ---
+<<<<<<< Updated upstream
 layout: default
 title: Dự án Odoo ERP
 ---
@@ -7,3 +8,120 @@ title: Dự án Odoo ERP
     <p>Vấn đề: 46 GAPs trong quy trình vận hành cũ.</p>
     <p>Giải pháp: Thiết kế thuật toán chặn xung đột 4 tầng.</p>
 </article>
+=======
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT Beauty ERP Project | BA Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        }
+      }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <main class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8" style="margin-top: 60px;">
+        
+        <a href="{{ site.baseurl }}/index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold mb-8 transition duration-200" style="text-decoration: none;">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Portfolio
+        </a>
+
+        <section class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold tracking-wide">
+                        Odoo ERP Implementation
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight" style="margin-top: 15px; margin-bottom: 20px;">
+                        HT Beauty Clinic Management System
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 leading-relaxed text-justify">
+                        An initiative aimed at digitalizing and automating the core operational workflows of a dermatology clinic. Designed to address severe issues of fragmented data, resource conflicts (double-booking), and manual tracking, the system revamps the clinic's processes on the Odoo ERP platform.
+                    </p>
+                    
+                    <div class="pt-6 flex flex-wrap gap-4">
+                        <a href="{{ site.baseurl }}/assets/docs/Bang_Phan_Tich_GAP_HT_Beauty.pdf" target="_blank" class="inline-flex items-center justify-center text-slate-800 font-semibold hover:text-white bg-white hover:bg-slate-800 border-2 border-slate-800 px-6 py-3 rounded-lg transition duration-300 shadow-sm" style="text-decoration: none;">
+                            <i class="fas fa-file-pdf mr-2 text-red-500"></i> View GAP Analysis
+                        </a>
+                        
+                        <a href="https://github.com/thaodang31231024250-blip/ht_beauty_management_nhomf.git" target="_blank" class="inline-flex items-center justify-center text-white font-semibold bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition duration-300 shadow-md" style="text-decoration: none;">
+                            <i class="fab fa-github mr-2 text-xl"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="w-full h-80 md:h-[450px] rounded-2xl shadow-2xl relative overflow-hidden bg-slate-200 border-4 border-white">
+                        <video autoplay loop muted playsinline poster="{{ site.baseurl }}/assets/images/ht-beauty-mockup.png" class="w-full h-full object-cover">
+                            <source src="{{ site.baseurl }}/assets/videos/ht-beauty-demo.mp4" type="video/mp4">
+                            </video>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-10 text-center" style="margin-bottom: 40px;">Deep Dive: Core Solutions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="flex flex-col group">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-6 shadow-md border border-slate-200 group-hover:shadow-xl transition duration-300">
+                        <img src="{{ site.baseurl }}/assets/images/booking-validation.gif" alt="Smart Booking Validation" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" style="margin-bottom: 10px;"><i class="fas fa-calendar-check text-blue-600 mr-2"></i> 4-Tier Validation Algorithm</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Introduces an intelligent multi-resource scheduling matrix that locks conflicting actions instantaneously, ensuring compliance with bed capacity and preventing double-booking of doctors.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-6 shadow-md border border-slate-200 group-hover:shadow-xl transition duration-300">
+                        <img src="{{ site.baseurl }}/assets/images/crm-sync.gif" alt="CRM Synchronization" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" style="margin-bottom: 10px;"><i class="fas fa-sync-alt text-green-600 mr-2"></i> Real-time Sync & Deduplication</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Eliminates the fragmented data issue by automatically pulling leads from the website directly into Odoo CRM. Built-in deduplication mechanisms guarantee a clean database.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-6 shadow-md border border-slate-200 group-hover:shadow-xl transition duration-300">
+                        <img src="{{ site.baseurl }}/assets/images/cronjob-tasks.png" alt="Automated Cron Job Tasks" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" style="margin-bottom: 10px;"><i class="fas fa-robot text-purple-600 mr-2"></i> Cron Jobs & SLA Compliance</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Autonomously deducts completed treatment sessions and triggers scheduled activities. It generates SLA-compliant follow-up tasks for the customer care department exactly 1 day or 3 days post-treatment.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
+</html>
+>>>>>>> Stashed changes

@@ -7,7 +7,7 @@ layout: default
     <section id="hero" class="hero">
         <div>
             <h1>Hello, I am Phuong Thao.</h1>
-            <p>I am a student on the journey to becoming a Business Analyst. My core strengths lie in logical requirement elicitation, clear process mapping, and acting as a bridge to ensure technology solutions truly solve business operational problems.</p>
+            <p>I am a student on the journey to becoming a Business Analyst. My core strengths lie in requirements elicitation, process mapping, and bridging the gap between business stakeholders and technical teams to ensure technology solutions effectively address business and operational needs.</p>
             <div class="hero-actions">
                 <button id="btn-view-cv" class="btn btn-primary">View CV</button>
                 <a href="#projects" class="btn btn-outline">View Projects</a>
@@ -18,9 +18,9 @@ layout: default
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
-            <div class="about-img-placeholder">
-                [ Personal Photo ]
-            </div>
+            <div class="about-img-placeholder" style="background: none; border: none;">
+    <img src="assets/images/my-photo.jpg" alt="Phuong Thao" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
             <div class="about-content">
                 <ul>
                     <li><strong>Education:</strong> 4th-year student majoring in Enterprise Resource Planning at UEH.</li>
@@ -111,5 +111,11 @@ layout: default
             </div>
         </div>
     </section>
-
+<div id="cv-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h2 class="modal-title section-title" style="margin-bottom: 0; padding-bottom: 5px; font-size: 1.5rem;">My Resume</h2>
+            <iframe src="assets/cv.pdf" class="cv-iframe" title="Phuong Thao CV"></iframe>
+        </div>
+    </div>
 </div>
