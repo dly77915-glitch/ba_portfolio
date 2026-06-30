@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Logic Modal (CV Popup)
+    // Logic Modal (CV Popup)
     const modal = document.getElementById('cv-modal');
     const btnOpenModal = document.getElementById('btn-view-cv');
     const btnCloseModal = document.getElementById('close-modal');
@@ -27,26 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if(e.target === modal) {
                 modal.classList.remove('active');
                 document.body.style.overflow = 'auto';
-            }
-        });
-    }
-
-    // 2. Logic Language Toggle (Khung sườn)
-    const langSwitch = document.getElementById('lang-switch');
-    let isEnglish = false;
-
-    if(langSwitch) {
-        langSwitch.addEventListener('click', () => {
-            isEnglish = !isEnglish;
-            // Toggle class trên body để điều khiển CSS hiển thị sau này
-            if(isEnglish) {
-                document.body.classList.remove('lang-vi');
-                document.body.classList.add('lang-en');
-                console.log("Đã chuyển sang tiếng Anh");
-            } else {
-                document.body.classList.remove('lang-en');
-                document.body.classList.add('lang-vi');
-                console.log("Đã chuyển sang tiếng Việt");
             }
         });
     }
