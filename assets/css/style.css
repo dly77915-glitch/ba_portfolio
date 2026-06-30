@@ -90,15 +90,6 @@ section {
     color: var(--accent-gold);
 }
 
-.lang-toggle button {
-    background: none;
-    border: none;
-    font-family: var(--font-main);
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--text-primary);
-}
-
 /* =========================================
    BUTTONS
 ========================================= */
@@ -362,15 +353,12 @@ section {
     border-bottom: 1px solid var(--border-color);
 }
 
-.iframe-placeholder {
+.cv-iframe {
     width: 100%;
-    height: calc(100% - 60px);
-    background: #E2E8F0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
+    height: calc(100vh - 200px);
+    border: none;
     border-radius: 4px;
+    background: #E2E8F0;
 }
 
 /* =========================================
@@ -420,4 +408,48 @@ section {
     font-size: 0.9rem;
     border-top: 1px solid var(--border-color);
     margin-top: 80px;
+}
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+========================================= */
+@media (max-width: 768px) {
+    /* Header & Nav */
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Typography & Spacing */
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+
+    /* About Grid: Chuyển từ xếp ngang sang xếp dọc */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-img-placeholder {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Modal CV */
+    .modal-container {
+        width: 95%;
+        padding: 15px;
+    }
 }

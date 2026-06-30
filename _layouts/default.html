@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +24,7 @@
             <button id="close-modal" class="close-btn">&times;</button>
             <div class="modal-content">
                 <h3 class="modal-title">Curriculum Vitae</h3>
-                <div class="iframe-placeholder">
-                    <p>Khu vực hiển thị CV (PDF iframe)</p>
-                </div>
+                <iframe src="{{ '/assets/cv.pdf' | relative_url }}" class="cv-iframe" title="CV PDF"></iframe>
             </div>
         </div>
     </div>
