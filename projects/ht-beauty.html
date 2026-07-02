@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +46,7 @@
                     <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300 border border-slate-700">Python</span>
                     <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300 border border-slate-700">PostgreSQL</span>
                     <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300 border border-slate-700">BPMN/UML</span>
-                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300 border border-slate-700">Agile</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300 border border-slate-700">Water Fall</span>
                 </div>
                 <div class="pt-6">
                     <a href="#solutions" class="bg-accent text-slate-900 px-6 py-3 rounded-lg font-bold hover:bg-white transition duration-300">
@@ -76,7 +79,7 @@
                     Our team implemented a tailored Odoo ERP solution. We conducted a deep AS-IS analysis identifying <strong>46 operational GAPs</strong>, designing a TO-BE system architecture that balanced out-of-the-box features with heavy customizations (42%) to support smart multi-resource scheduling and automated CRM funnels.
                 </p>
                 <div class="mt-6 flex gap-4">
-                    <a href="/ba_portfolio/assets/docs/Bang_Phan_Tich_GAP_HT_Beauty.pdf" target="_blank" class="inline-flex items-center text-primary font-semibold hover:underline">
+                    <a href="{{ '/assets/docs/Bang_Phan_Tich_GAP_HT_Beauty.pdf' | relative_url }}" target="_blank" class="inline-flex items-center text-primary font-semibold hover:underline">
                         <i class="fas fa-file-pdf mr-2"></i> View GAP Analysis (PDF)
                     </a>
                     <a href="https://github.com/thaodang31231024250-blip/ht_beauty_management_nhomf.git" target="_blank" class="inline-flex items-center text-primary font-semibold hover:underline">
@@ -87,17 +90,17 @@
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 class="font-bold text-gray-900 mb-4 border-b pb-2">Project Info</h3>
                 <ul class="space-y-3 text-sm">
-                    <li><span class="text-gray-500 block">Role</span> <span class="font-medium text-gray-900">Business & System Analyst</span></li>
+                    <li><span class="text-gray-500 block">Role</span> <span class="font-medium text-gray-900">Business Analyst, Project Manager</span></li>
                     <li><span class="text-gray-500 block">Client</span> <span class="font-medium text-gray-900">HT Beauty Clinic</span></li>
-                    <li><span class="text-gray-500 block">Domain</span> <span class="font-medium text-gray-900">Healthcare / E-commerce</span></li>
-                    <li><span class="text-gray-500 block">Duration</span> <span class="font-medium text-gray-900">Jan 2024 - Apr 2024</span></li>
-                    <li><span class="text-gray-500 block">Team Size</span> <span class="font-medium text-gray-900">5 Members (Agile/Scrum)</span></li>
+                    <li><span class="text-gray-500 block">Domain</span> <span class="font-medium text-gray-900">Healthcare / Appointment / CRM</span></li>
+                    <li><span class="text-gray-500 block">Duration</span> <span class="font-medium text-gray-900">Jan 2026 - Apr 2026</span></li>
+                    <li><span class="text-gray-500 block">Team Size</span> <span class="font-medium text-gray-900">5 Members</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-white">
+    <section class="py-16 px-6 bg-white border-b border-gray-200">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">My Responsibilities</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,6 +136,45 @@
         </div>
     </section>
 
+    <section class="py-16 px-6 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Deliverables (Tài liệu BA)</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Các tài liệu phân tích nghiệp vụ được xây dựng qua các giai đoạn (SDLC) nhằm đảm bảo sự đồng bộ giữa yêu cầu kinh doanh và giải pháp kỹ thuật.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow">
+                    <div class="text-blue-500 mb-4"><i class="fas fa-file-signature text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">BRD & GAP Analysis</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Tài liệu phân tích hiện trạng (AS-IS) và định nghĩa 46 điểm nghẽn nghiệp vụ cần xử lý.</p>
+                    <a href="{{ '/assets/docs/Bang_Phan_Tich_GAP_HT_Beauty.pdf' | relative_url }}" target="_blank" class="text-primary font-semibold hover:underline text-sm"><i class="fas fa-external-link-alt mr-1"></i> Xem tài liệu</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="text-green-500 mb-4"><i class="fas fa-project-diagram text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">BPMN / Process Flow</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Sơ đồ luồng quy trình TO-BE chuẩn hóa nghiệp vụ đặt lịch, tiếp đón và CSKH.</p>
+                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> Đang chuẩn bị file...</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="text-purple-500 mb-4"><i class="fas fa-file-code text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">FSD & Use Case</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Đặc tả tính năng chi tiết, điều kiện tiên quyết và kịch bản người dùng cho đội Dev.</p>
+                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> Đang chuẩn bị file...</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="text-orange-500 mb-4"><i class="fas fa-database text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">System Architecture</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Sơ đồ cơ sở dữ liệu (ERD) và kiến trúc tổng thể cho 5 phân hệ Odoo Custom.</p>
+                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> Đang chuẩn bị file...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="solutions" class="py-20 px-6 bg-gray-900 text-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
@@ -153,7 +195,7 @@
                 </div>
                 <div class="md:w-1/2 w-full">
                     <div class="w-full h-64 bg-slate-800 rounded-lg border border-slate-700 flex items-center justify-center shadow-lg overflow-hidden">
-                        <img src="/ba_portfolio/assets/images/booking-validation.gif" alt="Smart Booking Validation" class="w-full h-full object-cover">
+                        <img src="{{ '/assets/images/booking-validation.gif' | relative_url }}" alt="Smart Booking Validation" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -171,7 +213,7 @@
                 </div>
                 <div class="md:w-1/2 w-full">
                     <div class="w-full h-64 bg-slate-800 rounded-lg border border-slate-700 flex items-center justify-center shadow-lg overflow-hidden">
-                        <img src="/ba_portfolio/assets/images/crm-sync.gif" alt="CRM Synchronization" class="w-full h-full object-cover">
+                        <img src="{{ '/assets/images/crm-sync.gif' | relative_url }}" alt="CRM Synchronization" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -189,7 +231,7 @@
                 </div>
                 <div class="md:w-1/2 w-full">
                     <div class="w-full h-64 bg-slate-800 rounded-lg border border-slate-700 flex items-center justify-center shadow-lg overflow-hidden">
-                        <img src="/ba_portfolio/assets/images/cronjob-tasks.png" alt="Automated Cron Job Tasks" class="w-full h-full object-cover">
+                        <img src="{{ '/assets/images/cronjob-tasks.png' | relative_url }}" alt="Automated Cron Job Tasks" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -209,8 +251,8 @@
                     <p class="font-medium text-blue-100">Process GAPs Addressed</p>
                 </div>
                 <div>
-                    <div class="text-4xl md:text-5xl font-extrabold text-accent mb-2">0</div>
-                    <p class="font-medium text-blue-100">Manual Data Entry Errors (Leads)</p>
+                    <div class="text-4xl md:text-5xl font-extrabold text-accent mb-2">50%</div>
+                    <p class="font-medium text-blue-100">Reduction in Manual Data Entry Errors</p>
                 </div>
                 <div>
                     <div class="text-4xl md:text-5xl font-extrabold text-accent mb-2">↓</div>
