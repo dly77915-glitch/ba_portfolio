@@ -16,109 +16,120 @@ layout: default
         </div>
     </section>
 
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-img-placeholder" style="background: none; border: none;">
-                <img src="./assets/images/my-photo.jpg" alt="Phuong Thao" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            </div>
-            <div class="about-content">
-                <ul>
-                    <li><strong>Education:</strong> 4th-year student majoring in Enterprise Resource Planning at UEH.</li>
-                    <li><strong>Career Focus:</strong> E-commerce and Retails.</li>
-                    <li><strong>Working Mindset:</strong> I appreciate clarity, work systematically, and always put users and business value at the core when analyzing any tech solutions.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <section id="about" class="about-section">
+    <h2 class="section-title">About Me</h2>
 
-    <section id="skills" class="core-competencies compact-competencies">
+    <div class="about-grid">
+        <div class="about-photo-card">
+            <img src="{{ '/assets/images/my-photo.jpg' | relative_url }}" alt="Phuong Thao">
+        </div>
+
+            <ul class="about-highlights">
+                <li>
+                    <strong>Education:</strong>
+                    4th-year student majoring in Enterprise Resource Planning at UEH.
+                </li>
+                <li>
+                    <strong>Career Focus:</strong>
+                    E-commerce and Retail Operations.
+                </li>
+                <li>
+                    <strong>Working Mindset:</strong>
+                   I appreciate clarity, work systematically, and always put users and business value at the core when analyzing any tech solutions.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="skills" class="ba-competencies">
     <h2 class="section-title">Core Competencies</h2>
 
-    <p class="section-intro compact-intro">
+    <p class="ba-competencies-intro">
         Business Analysis competencies focused on understanding business problems,
-        modeling workflows, defining clear requirements, and supporting solution implementation.
+        modeling workflows, defining clear requirements, and supporting implementation
+        from analysis to user validation.
     </p>
 
-    <div class="competency-panel">
+    <div class="ba-competency-grid">
 
-        <div class="competency-row">
-            <div class="competency-number">01</div>
-            <div class="competency-body">
-                <span class="competency-label">Business Analysis</span>
-                <h3>Business Process & Requirements Analysis</h3>
-                <p>
-                    Analyze workflows, clarify stakeholder needs, identify pain points,
-                    and translate business problems into functional requirements.
-                </p>
-                <div class="competency-tags">
-                    <span>Requirement Elicitation</span>
-                    <span>Gap Analysis</span>
-                    <span>AS-IS / TO-BE</span>
-                    <span>Business Rules</span>
-                </div>
+        <article class="ba-skill-card">
+            <div class="ba-skill-top">
+                <span class="ba-skill-no">01</span>
+                <span class="ba-skill-label">Analysis</span>
             </div>
-        </div>
+            <h3>Business Process & Requirements Analysis</h3>
+            <p>
+                Analyze workflows, clarify stakeholder needs, identify pain points,
+                and translate business problems into functional requirements.
+            </p>
+            <div class="ba-tags">
+                <span>Requirement Elicitation</span>
+                <span>Gap Analysis</span>
+                <span>AS-IS / TO-BE</span>
+                <span>Business Rules</span>
+            </div>
+        </article>
 
-        <div class="competency-row">
-            <div class="competency-number">02</div>
-            <div class="competency-body">
-                <span class="competency-label">Documentation</span>
-                <h3>Process Modeling & BA Documentation</h3>
-                <p>
-                    Document business processes and system behavior clearly so business users
-                    and technical teams can share the same understanding.
-                </p>
-                <div class="competency-tags">
-                    <span>BPMN</span>
-                    <span>UML</span>
-                    <span>Use Case</span>
-                    <span>BRD / FRD / FSD</span>
-                </div>
+        <article class="ba-skill-card">
+            <div class="ba-skill-top">
+                <span class="ba-skill-no">02</span>
+                <span class="ba-skill-label">Modeling</span>
             </div>
-        </div>
+            <h3>Process Modeling & BA Documentation</h3>
+            <p>
+                Document business processes and system behavior clearly so business users
+                and technical teams can share the same understanding.
+            </p>
+            <div class="ba-tags">
+                <span>BPMN</span>
+                <span>UML</span>
+                <span>Use Case</span>
+                <span>BRD / FRD / FSD</span>
+            </div>
+        </article>
 
-        <div class="competency-row">
-            <div class="competency-number">03</div>
-            <div class="competency-body">
-                <span class="competency-label">Implementation BA</span>
-                <h3>Implementation Support & Solution Validation</h3>
-                <p>
-                    Support the transition from requirements to implementation by validating
-                    solution behavior, coordinating user feedback, and ensuring business fit.
-                </p>
-                <div class="competency-tags">
-                    <span>UAT Support</span>
-                    <span>Requirement Traceability</span>
-                    <span>Change Requests</span>
-                    <span>User Training</span>
-                </div>
+        <article class="ba-skill-card">
+            <div class="ba-skill-top">
+                <span class="ba-skill-no">03</span>
+                <span class="ba-skill-label">Implementation</span>
             </div>
-        </div>
+            <h3>Implementation Support & Solution Validation</h3>
+            <p>
+                Support the transition from requirements to implementation by validating
+                solution behavior, coordinating feedback, and confirming business fit.
+            </p>
+            <div class="ba-tags">
+                <span>UAT Support</span>
+                <span>Requirement Traceability</span>
+                <span>Change Requests</span>
+                <span>User Training</span>
+            </div>
+        </article>
 
-        <div class="competency-row">
-            <div class="competency-number">04</div>
-            <div class="competency-body">
-                <span class="competency-label">Data & Logic</span>
-                <h3>Data & System Thinking</h3>
-                <p>
-                    Understand how business data flows across processes and use data logic
-                    to support requirement analysis, reporting, and system decisions.
-                </p>
-                <div class="competency-tags">
-                    <span>ERD</span>
-                    <span>DFD</span>
-                    <span>SQL</span>
-                    <span>Reporting Logic</span>
-                </div>
+        <article class="ba-skill-card">
+            <div class="ba-skill-top">
+                <span class="ba-skill-no">04</span>
+                <span class="ba-skill-label">Data Logic</span>
             </div>
-        </div>
+            <h3>Data & System Thinking</h3>
+            <p>
+                Understand how business data flows across processes and use data logic
+                to support requirement analysis, reporting, and system decisions.
+            </p>
+            <div class="ba-tags">
+                <span>ERD</span>
+                <span>DFD</span>
+                <span>SQL</span>
+                <span>Reporting Logic</span>
+            </div>
+        </article>
 
     </div>
 
-    <div class="compact-tools">
-        <span class="tools-title">Supporting Tools</span>
-        <div class="tools-list">
+    <div class="ba-tools-strip">
+        <span class="ba-tools-label">Supporting Tools</span>
+        <div class="ba-tools">
             <span>Figma</span>
             <span>Draw.io</span>
             <span>Google Sheets</span>
