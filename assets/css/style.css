@@ -659,3 +659,14 @@ section {
         padding: 15px;
     }
 }
+/* =========================================
+   SECTION ALIGNMENT FIX
+   Align sections from Core Competencies onward
+========================================= */
+.page-section-align {
+    width: min(100%, 1100px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
