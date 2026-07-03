@@ -32,9 +32,15 @@ layout: null
     <section id="hero" class="bg-slate-900 text-white pt-24 pb-20 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 space-y-6">
-                <div class="inline-block px-4 py-1 bg-blue-500/20 text-accent rounded-full text-sm font-semibold tracking-wide border border-blue-500/30">
-                    Odoo ERP Implementation
-                </div>
+    <div class="space-y-3">
+        <a href="{{ '/' | relative_url }}" class="inline-flex items-center text-sm font-semibold text-accent/90 hover:text-white transition duration-300 group">
+            <i class="fas fa-arrow-left mr-2 transition-transform duration-300 group-hover:-translate-x-1"></i> Back to Home
+        </a>
+
+        <div class="inline-block px-4 py-1 bg-blue-500/20 text-accent rounded-full text-sm font-semibold tracking-wide border border-blue-500/30">
+            Odoo ERP Implementation
+        </div>
+    </div>
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight">
                     HT Beauty Clinic <br> <span class="text-accent">Management Ecosystem</span>
                 </h1>
@@ -68,7 +74,30 @@ layout: null
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-gray-50 border-b border-gray-200">
+<nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-4 overflow-x-auto">
+            <span class="text-xs font-bold uppercase tracking-wide text-gray-400 whitespace-nowrap">
+                Project Outline
+            </span>
+            <a href="#overview" class="text-sm font-semibold text-gray-600 hover:text-primary whitespace-nowrap transition">
+                Overview
+            </a>
+            <a href="#responsibilities" class="text-sm font-semibold text-gray-600 hover:text-primary whitespace-nowrap transition">
+                My Role
+            </a>
+            <a href="#deliverables" class="text-sm font-semibold text-gray-600 hover:text-primary whitespace-nowrap transition">
+                Deliverables
+            </a>
+            <a href="#solutions" class="text-sm font-semibold text-gray-600 hover:text-primary whitespace-nowrap transition">
+                Solutions
+            </a>
+            <a href="#impact" class="text-sm font-semibold text-gray-600 hover:text-primary whitespace-nowrap transition">
+                Impact
+            </a>
+        </div>
+    </nav>
+
+    <section id="overview" class="py-16 px-6 bg-gray-50 border-b border-gray-200">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="md:col-span-2 space-y-6">
                 <h2 class="text-3xl font-bold text-gray-900">Project Overview</h2>
@@ -99,8 +128,8 @@ layout: null
             </div>
         </div>
     </section>
-
-    <section class="py-16 px-6 bg-white border-b border-gray-200">
+    
+    <section id="responsibilities" class="py-16 px-6 bg-white border-b border-gray-200"></section>
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">My Responsibilities</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -136,7 +165,7 @@ layout: null
         </div>
     </section>
 
-<section class="py-16 px-6 bg-gray-50 border-b border-gray-200">
+<section id="deliverables" class="py-16 px-6 bg-gray-50 border-b border-gray-200">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Deliverables</h2>
@@ -326,7 +355,7 @@ layout: null
         </div>
     </section>
 
-    <section class="py-16 px-6 bg-blue-600 text-white">
+    <section id="impact" class="py-16 px-6 bg-blue-600 text-white">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-12">Business Impact</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
