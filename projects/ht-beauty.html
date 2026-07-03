@@ -93,7 +93,7 @@ layout: null
                     <li><span class="text-gray-500 block">Role</span> <span class="font-medium text-gray-900">Business Analyst, Project Manager</span></li>
                     <li><span class="text-gray-500 block">Client</span> <span class="font-medium text-gray-900">HT Beauty Clinic</span></li>
                     <li><span class="text-gray-500 block">Domain</span> <span class="font-medium text-gray-900">Healthcare / Appointment / CRM</span></li>
-                    <li><span class="text-gray-500 block">Duration</span> <span class="font-medium text-gray-900">Jan 2026 - Apr 2026</span></li>
+                    <li><span class="text-gray-500 block">Duration</span> <span class="font-medium text-gray-900">Apr 2026 - Jun 2026</span></li>
                     <li><span class="text-gray-500 block">Team Size</span> <span class="font-medium text-gray-900">5 Members</span></li>
                 </ul>
             </div>
@@ -140,39 +140,115 @@ layout: null
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Deliverables</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Business analysis documents developed throughout the SDLC to ensure strict alignment between business requirements and technical solutions.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto">Business analysis artifacts developed throughout the Software Development Life Cycle (SDLC), demonstrating how business needs are translated into structured documentation, optimized processes, and implementation-ready solutions.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition-shadow">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div class="text-blue-500 mb-4"><i class="fas fa-file-signature text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">BRD & GAP Analysis</h3>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">AS-IS state analysis documenting 46 core operational bottlenecks to be addressed.</p>
-                    <a href="{{ '/assets/docs/Bang_Phan_Tich_GAP_HT_Beauty.pdf' | relative_url }}" target="_blank" class="text-primary font-semibold hover:underline text-sm"><i class="fas fa-external-link-alt mr-1"></i> View Document</a>
+                    <h3 class="font-bold text-gray-900 mb-2">Business Foundation Document (BFD)</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Business Goals • Stakeholder Needs • GAP Analysis</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Captures business objectives, stakeholder expectations, AS-IS assessment, operational pain points, project scope, and prioritized business requirements to establish a clear project foundation before solution design.</p>
+                    <button type="button"
+                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+                        data-document-open
+                        data-doc-title="Business Foundation Document (BFD)"
+                        data-doc-subtitle="Business Goals • Stakeholder Needs • GAP Analysis"
+                        data-doc-src="{{ '/assets/docs/BRD_HT_Beauty.pdf' | relative_url }}"
+                        aria-label="View Business Foundation Document PDF">
+                        <i class="fas fa-file-pdf mr-2"></i> View Document
+                    </button>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div class="text-green-500 mb-4"><i class="fas fa-project-diagram text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">BPMN / Process Flow</h3>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">TO-BE process flow diagrams standardizing booking, patient reception, and after-care workflows.</p>
-                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation...</span>
+                    <h3 class="font-bold text-gray-900 mb-2">Business Process Design (BPD)</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">AS-IS • TO-BE • BPMN 2.0</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Documents end-to-end business workflows using BPMN 2.0, including current-state analysis, future-state process redesign, business rules, exception handling, and operational improvement opportunities.</p>
+                    <button type="button"
+                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+                        data-document-open
+                        data-doc-title="Business Process Design (BPD)"
+                        data-doc-subtitle="AS-IS • TO-BE • BPMN 2.0"
+                        data-doc-src="{{ '/assets/docs/BPD_HT_Beauty.pdf' | relative_url }}"
+                        aria-label="View Business Process Design PDF">
+                        <i class="fas fa-file-pdf mr-2"></i> View Document
+                    </button>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div class="text-purple-500 mb-4"><i class="fas fa-file-code text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">FSD & Use Case</h3>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Detailed functional specifications, preconditions, and user scenarios designed for the development team.</p>
-                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation...</span>
+                    <h3 class="font-bold text-gray-900 mb-2">Functional Requirements Document (FRD)</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Functional Specs • Use Cases • Acceptance Criteria</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Defines detailed functional requirements, user interactions, validation rules, business logic, exception scenarios, and acceptance criteria to support accurate system development.</p>
+                    <button type="button"
+                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+                        data-document-open
+                        data-doc-title="Functional Requirements Document (FRD)"
+                        data-doc-subtitle="Functional Specs • Use Cases • Acceptance Criteria"
+                        data-doc-src="{{ '/assets/docs/FRD_HT_Beauty.pdf' | relative_url }}"
+                        aria-label="View Functional Requirements Document PDF">
+                        <i class="fas fa-file-pdf mr-2"></i> View Document
+                    </button>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-80 hover:opacity-100 transition-opacity">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
                     <div class="text-orange-500 mb-4"><i class="fas fa-database text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">System Architecture</h3>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Entity-Relationship Diagrams (ERD) and overarching system architecture for 5 custom Odoo modules.</p>
-                    <span class="text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation...</span>
+                    <h3 class="font-bold text-gray-900 mb-2">Data Modeling &amp; System Analysis</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">ERD • DFD • Data Dictionary</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Models business data structures and system interactions through Entity-Relationship Diagrams, Data Flow Diagrams, and system analysis artifacts to support solution architecture and implementation.</p>
+                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
+                    <div class="text-pink-500 mb-4"><i class="fas fa-pencil-ruler text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">Wireframes &amp; UI Prototypes</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">User Flow • Low-Fi • High-Fi</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Illustrates user journeys and interface concepts through wireframes and interactive prototypes to validate business requirements before development.</p>
+                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
+                    <div class="text-teal-500 mb-4"><i class="fas fa-clipboard-check text-3xl"></i></div>
+                    <h3 class="font-bold text-gray-900 mb-2">Testing &amp; UAT Documentation</h3>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Test Cases • UAT • Bug Reports</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Documents business validation activities including User Acceptance Testing, test scenarios, defect tracking, and final business sign-off before deployment.</p>
+                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
                 </div>
             </div>
         </div>
+
+        <div id="documentDrawerOverlay" class="fixed inset-0 z-50 hidden bg-slate-900/70 opacity-0 transition-opacity duration-300" aria-hidden="true"></div>
+
+        <aside id="documentDrawer"
+            class="fixed right-0 top-0 z-50 flex h-full w-full translate-x-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out md:w-[85vw] lg:w-[72vw] xl:w-[64vw]"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+            aria-labelledby="drawerDocumentTitle">
+            <div class="flex items-start justify-between gap-4 border-b border-gray-200 px-6 py-5">
+                <div>
+                    <h3 id="drawerDocumentTitle" class="text-xl md:text-2xl font-bold text-gray-900">Document Preview</h3>
+                    <p id="drawerDocumentSubtitle" class="mt-1 text-sm font-medium text-gray-500"></p>
+                </div>
+                <button type="button" id="closeDocumentDrawer" class="rounded-full p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900" aria-label="Close document preview">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="flex-1 bg-gray-100 p-4 md:p-6 overflow-hidden">
+                <div class="h-full rounded-xl border border-gray-200 bg-white p-2 shadow-sm">
+                    <iframe id="documentPreviewFrame" class="h-full w-full rounded-lg" title="PDF Document Preview"></iframe>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 border-t border-gray-200 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-xs text-gray-500">Preview stays on this page. Use the fallback link only if the PDF does not load in your browser.</p>
+                <a id="drawerFallbackLink" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-900">
+                    <i class="fas fa-up-right-from-square mr-2"></i> Open PDF in new tab
+                </a>
+            </div>
+        </aside>
     </section>
 
     <section id="solutions" class="py-20 px-6 bg-gray-900 text-white">
