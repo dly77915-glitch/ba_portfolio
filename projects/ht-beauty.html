@@ -349,6 +349,73 @@ layout: null
             </div>
         </div>
     </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const openButtons = document.querySelectorAll('[data-document-open]');
+        const overlay = document.getElementById('documentDrawerOverlay');
+        const drawer = document.getElementById('documentDrawer');
+        const closeButton = document.getElementById('closeDocumentDrawer');
+        const drawerTitle = document.getElementById('drawerDocumentTitle');
+        const drawerSubtitle = document.getElementById('drawerDocumentSubtitle');
+        const previewFrame = document.getElementById('documentPreviewFrame');
+        const fallbackLink = document.getElementById('drawerFallbackLink');
 
+        if (!overlay || !drawer || !closeButton || !drawerTitle || !drawerSubtitle || !previewFrame || !fallbackLink) {
+            return;
+        }
+
+        function openDrawer(button) {
+            const title = button.getAttribute('data-doc-title') || 'Document Preview';
+            const subtitle = button.getAttribute('data-doc-subtitle') || '';
+            const src = button.getAttribute('data-doc-src') || '#';
+
+            drawerTitle.textContent = title;
+            drawerSubtitle.textContent = subtitle;
+            previewFrame.src = src;
+            fallbackLink.href = src;
+
+            overlay.classList.remove('hidden');
+            drawer.classList.remove('translate-x-full');
+            document.body.classList.add('overflow-hidden');
+
+            overlay.setAttribute('aria-hidden', 'false');
+            drawer.setAttribute('aria-hidden', 'false');
+
+            requestAnimationFrame(function () {
+                overlay.style.opacity = '1';
+            });
+        }
+
+        function closeDrawer() {
+            overlay.style.opacity = '0';
+            drawer.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+
+            overlay.setAttribute('aria-hidden', 'true');
+            drawer.setAttribute('aria-hidden', 'true');
+
+            window.setTimeout(function () {
+                overlay.classList.add('hidden');
+                previewFrame.src = '';
+                fallbackLink.href = '#';
+            }, 300);
+        }
+
+        openButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                openDrawer(button);
+            });
+        });
+
+        closeButton.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && drawer.getAttribute('aria-hidden') === 'false') {
+                closeDrawer();
+            }
+        });
+    });
+</script>
 </body>
 </html>
