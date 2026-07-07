@@ -379,7 +379,6 @@ section {
 }
 
 .about-card::before {
-    content: "ANALYST PROFILE";
     display: inline-flex;
     margin-bottom: 18px;
     padding: 6px 9px;
@@ -654,7 +653,6 @@ section {
 }
 
 .project-card::before {
-    content: "CASE STUDY";
     display: inline-flex;
     margin-bottom: 16px;
     padding: 5px 8px;
