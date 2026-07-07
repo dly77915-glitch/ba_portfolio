@@ -378,19 +378,6 @@ section {
     box-shadow: var(--shadow-card);
 }
 
-.about-card::before {
-    display: inline-flex;
-    margin-bottom: 18px;
-    padding: 6px 9px;
-    border: 1px solid rgba(37, 99, 235, 0.18);
-    border-radius: var(--radius-sm);
-    background: rgba(37, 99, 235, 0.055);
-    color: var(--accent-blue);
-    font-size: 0.72rem;
-    font-weight: 850;
-    letter-spacing: 0.1em;
-}
-
 .about-eyebrow {
     display: inline-flex;
     margin-bottom: 12px;
@@ -650,19 +637,6 @@ section {
     background: #FFFFFF;
     box-shadow: var(--shadow-card);
     transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
-}
-
-.project-card::before {
-    display: inline-flex;
-    margin-bottom: 16px;
-    padding: 5px 8px;
-    border: 1px solid rgba(37, 99, 235, 0.18);
-    border-radius: var(--radius-sm);
-    background: rgba(37, 99, 235, 0.055);
-    color: var(--accent-blue);
-    font-size: 0.68rem;
-    font-weight: 900;
-    letter-spacing: 0.12em;
 }
 
 .project-card:hover {
