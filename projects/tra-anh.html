@@ -450,50 +450,69 @@
       background: rgba(101, 226, 217, 0.12);
     }
 
-    .video-container {
-      max-width: 600px;
-      margin: 0 auto;
-      border: 1px solid var(--line);
-      background: var(--surface-muted);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(23, 32, 51, 0.08);
+    .prototype-panel {
+      /* Video crop adjustment variables:
+         --prototype-video-scale: How much to zoom/enlarge the 16:9 YouTube video to fit the 9:16 viewport.
+                                 Increase to show more phone content and less black bars; decrease to show less.
+         --prototype-video-position-x: Horizontal centering of the zoomed video (default 50% = center).
+         --prototype-video-position-y: Vertical centering of the zoomed video (default 50% = center).
+      */
+      --prototype-video-scale: 3.15;
+      --prototype-video-position-x: 50%;
+      --prototype-video-position-y: 50%;
     }
 
-    .video-player {
-      position: relative;
+    .prototype-video-viewport {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      aspect-ratio: 16 / 9;
+    }
+
+    .prototype-video-crop {
+      position: relative;
+      width: min(320px, 100%);
+      aspect-ratio: 9 / 16;
       overflow: hidden;
       background: #000000;
+      border-radius: 14px;
     }
 
-    .video-player iframe {
-      width: 100%;
+    .prototype-video-crop iframe {
+      position: absolute;
+      top: var(--prototype-video-position-y);
+      left: var(--prototype-video-position-x);
       height: 100%;
+      width: auto;
+      min-width: calc(100% * var(--prototype-video-scale));
+      aspect-ratio: 16 / 9;
+      transform: translate(-50%, -50%);
       border: 0;
     }
 
     .prototype-placeholder {
       display: grid;
       place-items: center;
+      width: 100%;
       height: 100%;
-      padding: 34px;
+      background: linear-gradient(135deg, #111827 0%, #0b1220 100%);
       color: #dbeafe;
       text-align: center;
+      padding: 24px;
+      border-radius: 14px;
     }
 
     .prototype-placeholder strong {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: #ffffff;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
     .prototype-placeholder span {
       display: block;
       color: #9fb0c7;
-      font-size: 0.88rem;
+      font-size: 0.8rem;
     }
 
     .document-overlay {
@@ -611,6 +630,14 @@
       .solutions-grid,
       .prototype-panel {
         grid-template-columns: 1fr;
+      }
+
+      .prototype-panel {
+        align-items: flex-start;
+      }
+
+      .prototype-video-crop {
+        width: min(300px, 90vw);
       }
 
       .hero {
@@ -985,7 +1012,7 @@
             <span class="section-kicker">Prototype Preview</span>
             <h3 id="prototype-title">Explore the proposed solutions through interactive mobile prototypes</h3>
             <p>
-              These prototypes demonstrate how the proposed solutions could work in a real mobile experience. Select a solution below to view its key user flow, interface behavior, and intended business impact within the HT Beauty platform.
+              These prototypes demonstrate how the proposed solutions could work in a real mobile experience. Select a solution below to view its key user flow, interface behavior, and intended business impact within the Tra Anh digital ordering platform.
             </p>
 
             <div class="prototype-tabs" aria-label="Prototype solution selector">
@@ -1010,11 +1037,12 @@
             </div>
           </div>
 
-          <div class="video-container" aria-label="Prototype video frame">
-            <div class="video-player" id="prototypeScreen">
+          <div class="prototype-video-viewport" aria-label="Prototype video frame">
+            <div class="prototype-video-crop" id="prototypeScreen">
               <div class="prototype-placeholder">
                 <div>
-                  <strong id="prototypePlaceholderTitle">Complex Customization Flow</strong>
+                  <strong>Complex Customization Flow</strong>
+                  <span>Prototype video coming soon.</span>
                 </div>
               </div>
             </div>
@@ -1132,11 +1160,11 @@
         });
 
         if (!youtubeId) {
-          prototypeScreen.innerHTML = '<div class="prototype-placeholder"><div><strong id="prototypePlaceholderTitle">' + title + '</strong></div></div>';
+          prototypeScreen.innerHTML = '<div class="prototype-placeholder"><div><strong>' + title + '</strong><span>Prototype video coming soon.</span></div></div>';
           return;
         }
 
-        prototypeScreen.innerHTML = '<iframe src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&modestbranding=1&playsinline=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        prototypeScreen.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + youtubeId + '?rel=0&playsinline=1&controls=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
       }
 
       prototypeButtons.forEach(function (button) {
@@ -1145,7 +1173,7 @@
         });
       });
 
-      if (prototypeButtons.length && placeholderTitle) {
+      if (prototypeButtons.length) {
         renderPrototype(prototypeButtons[0]);
       }
 
