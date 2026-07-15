@@ -450,38 +450,28 @@
       background: rgba(101, 226, 217, 0.12);
     }
 
-    .phone-shell {
-      width: min(100%, 330px);
-      aspect-ratio: 393 / 852;
+    .video-container {
+      max-width: 600px;
       margin: 0 auto;
-      padding: 13px;
-      border: 1px solid #44536a;
-      background: linear-gradient(145deg, #111827, #05070c);
-      border-radius: 44px;
-      box-shadow: inset 0 0 0 2px #202b3b, 0 28px 60px rgba(0, 0, 0, 0.38);
+      border: 1px solid var(--line);
+      background: var(--surface-muted);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(23, 32, 51, 0.08);
     }
 
-    .phone-screen {
+    .video-player {
       position: relative;
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: #0b1220;
-      border-radius: 34px;
+      background: #000000;
     }
 
-    .phone-screen::before {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      z-index: 2;
-      width: 92px;
-      height: 25px;
-      background: #05070c;
-      border-radius: 999px;
-      content: "";
-      transform: translateX(-50%);
+    .video-player iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     .prototype-placeholder {
@@ -504,12 +494,6 @@
       display: block;
       color: #9fb0c7;
       font-size: 0.88rem;
-    }
-
-    .phone-screen iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
     }
 
     .document-overlay {
@@ -999,41 +983,38 @@
         <div class="prototype-panel" aria-labelledby="prototype-title">
           <div>
             <span class="section-kicker">Prototype Preview</span>
-            <h3 id="prototype-title">View each solution inside an iPhone 16-style frame</h3>
+            <h3 id="prototype-title">Explore the proposed solutions through interactive mobile prototypes</h3>
             <p>
-              Record the mobile prototype vertically, upload it to YouTube as an unlisted video,
-              then replace each button's <code>data-youtube-id</code> with the matching YouTube ID.
-              The frame keeps the phone ratio and makes the prototype feel native to the case study.
+              These prototypes demonstrate how the proposed solutions could work in a real mobile experience. Select a solution below to view its key user flow, interface behavior, and intended business impact within the HT Beauty platform.
             </p>
 
             <div class="prototype-tabs" aria-label="Prototype solution selector">
               <button class="prototype-tab is-active" type="button"
                 data-prototype-title="Complex Customization Flow"
-                data-youtube-id="">
-                <span>Solution 01</span>
-                Customization prototype
+                data-youtube-id="jk7XDpeFRec">
+                <span>SOLUTION 01</span>
+                Complex Customization Flow
               </button>
               <button class="prototype-tab" type="button"
                 data-prototype-title="Order Status Synchronization"
                 data-youtube-id="">
-                <span>Solution 02</span>
-                Status sync prototype
+                <span>SOLUTION 02</span>
+                Order Status Synchronization
               </button>
               <button class="prototype-tab" type="button"
-                data-prototype-title="Customer Loyalty Management"
+                data-prototype-title="Loyalty Data Integration"
                 data-youtube-id="">
-                <span>Solution 03</span>
-                Loyalty data prototype
+                <span>SOLUTION 03</span>
+                Loyalty Data Integration
               </button>
             </div>
           </div>
 
-          <div class="phone-shell" aria-label="iPhone 16 prototype frame">
-            <div class="phone-screen" id="prototypeScreen">
+          <div class="video-container" aria-label="Prototype video frame">
+            <div class="video-player" id="prototypeScreen">
               <div class="prototype-placeholder">
                 <div>
                   <strong id="prototypePlaceholderTitle">Complex Customization Flow</strong>
-                  <span>Add a YouTube video ID in <code>data-youtube-id</code> to show the prototype here.</span>
                 </div>
               </div>
             </div>
@@ -1151,7 +1132,7 @@
         });
 
         if (!youtubeId) {
-          prototypeScreen.innerHTML = '<div class="prototype-placeholder"><div><strong id="prototypePlaceholderTitle">' + title + '</strong><span>Add a YouTube video ID in <code>data-youtube-id</code> to show the prototype here.</span></div></div>';
+          prototypeScreen.innerHTML = '<div class="prototype-placeholder"><div><strong id="prototypePlaceholderTitle">' + title + '</strong></div></div>';
           return;
         }
 
