@@ -1,9 +1,1188 @@
----
-layout: default
-title: Dự án E-commerce
----
-<article>
-    <h1>Digital Marketing Automation</h1>
-    <p>Vấn đề: Luồng chăm sóc khách hàng bị đứt gãy.</p>
-    <p>Giải pháp: Xây dựng luồng tự động hóa CSKH.</p>
-</article>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F&amp;B Digital Ordering Solution Prototype | Tra Anh Beverage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --surface-muted: #eef6f8;
+      --text: #172033;
+      --muted: #637083;
+      --line: #dfe7ef;
+      --primary: #1769e0;
+      --primary-dark: #0f4faa;
+      --teal: #0f9f9a;
+      --amber: #c77a10;
+      --shadow: 0 18px 45px rgba(23, 32, 51, 0.08);
+      --radius: 8px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(23, 105, 224, 0.95), rgba(12, 68, 132, 0.92)),
+        radial-gradient(circle at top right, rgba(15, 159, 154, 0.45), transparent 38%);
+      color: #ffffff;
+      padding: 72px 24px 60px;
+    }
+
+    .hero__inner {
+      display: block;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      color: #dcecff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #ffffff;
+      transform: translateX(-3px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 16px;
+      color: #d6f5f3;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 9px;
+      height: 9px;
+      background: #65e2d9;
+      border-radius: 999px;
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin-bottom: 20px;
+      font-size: clamp(2.25rem, 5vw, 4.75rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .hero__description {
+      max-width: 700px;
+      margin-bottom: 28px;
+      color: #e7eefb;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      backdrop-filter: blur(12px);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+    }
+
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--text);
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      color: var(--text);
+      font-size: 1.08rem;
+      line-height: 1.3;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.75fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel,
+    .info-card,
+    .solution-card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 28px;
+    }
+
+    .problem-solution {
+      display: grid;
+      gap: 18px;
+    }
+
+    .copy-block {
+      padding-left: 18px;
+      border-left: 4px solid var(--line);
+    }
+
+    .copy-block--problem {
+      border-color: #d95858;
+    }
+
+    .copy-block--solution {
+      padding: 18px;
+      border: 1px solid #bfe8e5;
+      border-left: 4px solid var(--teal);
+      background: var(--surface-muted);
+      border-radius: var(--radius);
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .copy-block p,
+    .solution-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .info-card {
+      padding: 8px;
+    }
+
+    .info-list {
+      margin: 0;
+    }
+
+    .info-item {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 12px;
+      padding: 15px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-item:last-child {
+      border-bottom: 0;
+    }
+
+    .info-item dt {
+      color: var(--muted);
+      font-size: 0.83rem;
+      font-weight: 400;
+    }
+
+    .info-item dd {
+      margin: 0;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 14px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius);
+    }
+
+    .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      background: #e8f1ff;
+      border-radius: var(--radius);
+      color: var(--primary);
+      flex: 0 0 auto;
+    }
+
+    .icon--teal {
+      background: #e3f8f6;
+      color: var(--teal);
+    }
+
+    .icon--amber {
+      background: #fff2dd;
+      color: var(--amber);
+    }
+
+    .icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-item p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .document-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      min-height: 40px;
+      margin-top: 16px;
+      padding: 0 14px;
+      border: 1px solid #c4d7f0;
+      background: #f2f7ff;
+      border-radius: var(--radius);
+      color: var(--primary-dark);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .document-action:hover {
+      background: #e7f0ff;
+      border-color: #9ebfe8;
+      transform: translateY(-1px);
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .solution-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 24px;
+    }
+
+    .solution-number {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      margin-bottom: 16px;
+      padding: 5px 9px;
+      border: 1px solid #bcd2ee;
+      background: #edf5ff;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .card-divider {
+      height: 1px;
+      margin: 18px 0;
+      background: var(--line);
+    }
+
+    .solution-highlight {
+      margin-top: auto;
+      padding: 16px;
+      background: #f0faf9;
+      border: 1px solid #c6ebe8;
+      border-radius: var(--radius);
+    }
+
+    .prototype-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+      gap: 28px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 28px;
+      border: 1px solid #223455;
+      background: #111827;
+      border-radius: var(--radius);
+      box-shadow: 0 22px 50px rgba(17, 24, 39, 0.18);
+    }
+
+    .prototype-panel h3,
+    .prototype-panel p {
+      color: #ffffff;
+    }
+
+    .prototype-panel p {
+      color: #cbd5e1;
+    }
+
+    .prototype-tabs {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .prototype-tab {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid rgba(203, 213, 225, 0.24);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      color: #e5eefb;
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .prototype-tab span {
+      color: #8de7df;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .prototype-tab.is-active,
+    .prototype-tab:hover {
+      border-color: #65e2d9;
+      background: rgba(101, 226, 217, 0.12);
+    }
+
+    .prototype-panel {
+      /* Video crop adjustment variables:
+         --prototype-video-scale: How much to zoom/enlarge the 16:9 YouTube video to fit the 9:16 viewport.
+                                 Increase to show more phone content and less black bars; decrease to show less.
+         --prototype-video-position-x: Horizontal centering of the zoomed video (default 50% = center).
+         --prototype-video-position-y: Vertical centering of the zoomed video (default 50% = center).
+      */
+      --prototype-video-scale: 3.15;
+      --prototype-video-position-x: 50%;
+      --prototype-video-position-y: 50%;
+    }
+
+    .prototype-video-viewport {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .prototype-video-crop {
+      position: relative;
+      width: min(320px, 100%);
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      background: #000000;
+      border-radius: 14px;
+    }
+
+    .prototype-video-crop iframe {
+      position: absolute;
+      top: var(--prototype-video-position-y);
+      left: var(--prototype-video-position-x);
+      height: 100%;
+      width: auto;
+      min-width: calc(100% * var(--prototype-video-scale));
+      aspect-ratio: 16 / 9;
+      transform: translate(-50%, -50%);
+      border: 0;
+    }
+
+    .prototype-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #111827 0%, #0b1220 100%);
+      color: #dbeafe;
+      text-align: center;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .prototype-placeholder strong {
+      display: block;
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    .prototype-placeholder span {
+      display: block;
+      color: #9fb0c7;
+      font-size: 0.8rem;
+    }
+
+    .document-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      background: rgba(15, 23, 42, 0.68);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .document-overlay.is-visible {
+      display: block;
+      opacity: 1;
+    }
+
+    .document-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      width: min(920px, 100%);
+      height: 100vh;
+      background: #ffffff;
+      box-shadow: -24px 0 70px rgba(15, 23, 42, 0.22);
+      transform: translateX(100%);
+      transition: transform 0.28s ease;
+    }
+
+    .document-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .drawer-header,
+    .drawer-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .drawer-footer {
+      border-top: 1px solid var(--line);
+      border-bottom: 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .drawer-title {
+      margin: 0;
+      font-size: 1.18rem;
+    }
+
+    .drawer-subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .drawer-close {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      border-radius: var(--radius);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .drawer-body {
+      flex: 1;
+      min-height: 0;
+      padding: 18px;
+      background: #f1f5f9;
+    }
+
+    .document-frame {
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      border-radius: var(--radius);
+    }
+
+    .drawer-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer-note {
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid,
+      .solutions-grid,
+      .prototype-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .prototype-panel {
+        align-items: flex-start;
+      }
+
+      .prototype-video-crop {
+        width: min(300px, 90vw);
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .solutions-grid {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 42px 18px 56px;
+      }
+
+      .hero {
+        padding: 44px 18px 42px;
+      }
+
+      .section {
+        margin-bottom: 44px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .panel,
+      .solution-card {
+        padding: 20px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-item {
+        grid-template-columns: 40px minmax(0, 1fr);
+        padding: 18px;
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .info-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .prototype-panel {
+        padding: 22px;
+      }
+
+      .drawer-header,
+      .drawer-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .drawer-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .tags {
+        gap: 8px;
+      }
+
+      .tag {
+        width: 100%;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero__inner">
+        <a href="../index.html#projects" class="back-link" aria-label="Back to portfolio projects">&larr; Back to Portfolio</a>
+        <p class="eyebrow">Business Analyst Portfolio Project</p>
+        <h1>F&amp;B Digital Ordering Solution Prototype | Tra Anh Beverage</h1>
+        <p class="hero__description">
+          Digitalized and automated the ordering process to resolve peak-hour bottlenecks,
+          optimize customer experience, and reduce reliance on third-party delivery platforms.
+        </p>
+        <ul class="tags" aria-label="Tech stack">
+          <li class="tag">BPMN</li>
+          <li class="tag">UML</li>
+          <li class="tag">Figma</li>
+          <li class="tag">Draw.io</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="overview-title">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Project Overview</span>
+            <h2 id="overview-title">From manual ordering to a structured digital service flow</h2>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <article class="panel">
+            <div class="problem-solution">
+              <div class="copy-block copy-block--problem">
+                <span class="label">The Problem</span>
+                <p>
+                  The store relied heavily on manual paper-based ordering, leading to frequent
+                  errors such as wrong sizes and missing toppings, operational chaos during peak
+                  hours, and time-consuming end-of-day reconciliation. Additionally, high commission
+                  fees (20-30%) from third-party apps limited profitability and prevented the store
+                  from capturing customer data for retention programs.
+                </p>
+              </div>
+
+              <div class="copy-block copy-block--solution">
+                <span class="label">The Solution</span>
+                <p>
+                  Proposed and designed an "Order &amp; Pick-up" mobile application prototype
+                  tailored for Tra Anh. The system features a comprehensive user flow from menu
+                  selection and detailed beverage customization to a seamless payment gateway,
+                  effectively resolving operational bottlenecks.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <aside class="info-card" aria-labelledby="info-title">
+            <dl class="info-list">
+              <div class="info-item">
+                <dt id="info-title">Role</dt>
+                <dd>Business Analyst</dd>
+              </div>
+              <div class="info-item">
+                <dt>Client</dt>
+                <dd>Tra Anh Beverage</dd>
+              </div>
+              <div class="info-item">
+                <dt>Domain</dt>
+                <dd>F&amp;B / E-commerce / Digital Ordering</dd>
+              </div>
+              <div class="info-item">
+                <dt>Duration</dt>
+                <dd>Sep 2025 - Dec 2025</dd>
+              </div>
+              <div class="info-item">
+                <dt>Team Size</dt>
+                <dd>5 Members</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="responsibilities-title">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">My Responsibilities</span>
+            <h2 id="responsibilities-title">Analysis, modeling, data architecture, and UX validation</h2>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </span>
+            <div>
+              <h3>Requirement Elicitation &amp; Analysis</h3>
+              <p>
+                Conducted AS-IS process analysis to identify operational pain points and defined
+                detailed Functional (FR) and Non-Functional Requirements (NFR).
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><path d="M7 10v4h11"></path></svg>
+            </span>
+            <div>
+              <h3>System Design &amp; Modeling</h3>
+              <p>
+                Modeled business processes using BPMN and designed UML diagrams including Use Case,
+                Activity, Sequence, and Class Diagrams to visualize system behavior and interactions.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon icon--amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>
+            </span>
+            <div>
+              <h3>Data Architecture</h3>
+              <p>
+                Designed conceptual and physical data models, built Entity-Relationship Diagrams
+                (ERD), and defined strict database constraints.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5V4a2 2 0 0 1 2-2h8l6 6v11.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M14 2v6h6"></path><path d="M8 13h8"></path><path d="M8 17h5"></path></svg>
+            </span>
+            <div>
+              <h3>Requirement Lifecycle &amp; UI/UX</h3>
+              <p>
+                Managed the Product Backlog, broke down User Stories, designed User Flows via
+                Draw.io, and created interactive Wireframes/Mockups on Figma.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="deliverables-title">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Project Deliverables</span>
+            <h2 id="deliverables-title">Documentation and prototypes ready for stakeholder review</h2>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-item">
+            <span class="icon icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7h6l2 3h10v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M3 7V5a2 2 0 0 1 2-2h4l2 4"></path></svg>
+            </span>
+            <div>
+              <h3>Business Process Design (BPD)</h3>
+              <p>
+                AS-IS and TO-BE process models using BPMN to optimize the end-to-end ordering workflow.
+              </p>
+              <button class="document-action" type="button" disabled>
+                View document
+              </button>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg>
+            </span>
+            <div>
+              <h3>Functional Specification Document (FSD)</h3>
+              <p>
+                Detailed Use Case specifications for core modules including Ordering, Payment,
+                Order Management, and Delivery.
+              </p>
+              <button class="document-action" type="button" disabled>
+                View document
+              </button>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon icon--amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="M3 8h18"></path><path d="M3 16h18"></path><path d="M7 3v18"></path><path d="M17 3v18"></path></svg>
+            </span>
+            <div>
+              <h3>Data Modeling &amp; System Analysis</h3>
+              <p>
+                Class diagrams, ERDs, and data dictionaries detailing structural relationships and
+                data integrity rules.
+              </p>
+              <button class="document-action" type="button" disabled>
+                View document
+              </button>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <span class="icon icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path><path d="M3 9h18"></path></svg>
+            </span>
+            <div>
+              <h3>Wireframes &amp; UI Prototypes</h3>
+              <p>
+                High-fidelity mockups designed on Figma illustrating the complete customer journey.
+              </p>
+              <button class="document-action" type="button" disabled>
+                View document
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="solutions-title">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Deep Dive: Core Solutions</span>
+            <h2 id="solutions-title">Three system improvements behind the prototype</h2>
+          </div>
+        </div>
+
+        <div class="solutions-grid">
+          <article class="solution-card">
+            <span class="solution-number">Solution 01</span>
+            <h3>Digitizing Complex Beverage Customization Flows</h3>
+            <span class="label">The Problem</span>
+            <p>
+              Manual paper orders caused frequent errors regarding cup sizes, sugar/ice levels,
+              and toppings.
+            </p>
+            <div class="card-divider"></div>
+            <div class="solution-highlight">
+              <span class="label">The Solution</span>
+              <p>
+                Designed a strict "Add to Cart" Use Case flow that enforces step-by-step
+                customization with logical constraints, ensuring accurate orders are sent directly
+                to the preparation queue.
+              </p>
+            </div>
+          </article>
+
+          <article class="solution-card">
+            <span class="solution-number">Solution 02</span>
+            <h3>Multi-Actor Order Status Synchronization</h3>
+            <span class="label">The Problem</span>
+            <p>
+              A lack of communication between Customers, Cashiers, Baristas, and Shippers led to
+              delayed service and overlooked orders.
+            </p>
+            <div class="card-divider"></div>
+            <div class="solution-highlight">
+              <span class="label">The Solution</span>
+              <p>
+                Engineered a sequence flow connecting three distinct actors. Order statuses sync
+                in real-time from "Preparing" to "Waiting for Delivery/Pickup" to "Completed."
+              </p>
+            </div>
+          </article>
+
+          <article class="solution-card">
+            <span class="solution-number">Solution 03</span>
+            <h3>Customer Data &amp; Loyalty Management</h3>
+            <span class="label">The Problem</span>
+            <p>
+              Heavy reliance on third-party apps caused a loss of customer connection, hindering
+              remarketing and loyalty programs.
+            </p>
+            <div class="card-divider"></div>
+            <div class="solution-highlight">
+              <span class="label">The Solution</span>
+              <p>
+                Structured a robust database architecture to capture customer profiles, order
+                history, and promotional code logic, laying the foundation for personalized
+                marketing and customer retention campaigns.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="prototype-panel" aria-labelledby="prototype-title">
+          <div>
+            <span class="section-kicker">Prototype Preview</span>
+            <h3 id="prototype-title">Explore the proposed solutions through interactive mobile prototypes</h3>
+            <p>
+              These prototypes demonstrate how the proposed solutions could work in a real mobile experience. Select a solution below to view its key user flow, interface behavior, and intended business impact within the Tra Anh digital ordering platform.
+            </p>
+
+            <div class="prototype-tabs" aria-label="Prototype solution selector">
+              <button class="prototype-tab is-active" type="button"
+                data-prototype-title="Complex Customization Flow"
+                data-youtube-id="jk7XDpeFRec">
+                <span>SOLUTION 01</span>
+                Complex Customization Flow
+              </button>
+              <button class="prototype-tab" type="button"
+                data-prototype-title="Order Status Synchronization"
+                data-youtube-id="">
+                <span>SOLUTION 02</span>
+                Order Status Synchronization
+              </button>
+              <button class="prototype-tab" type="button"
+                data-prototype-title="Loyalty Data Integration"
+                data-youtube-id="">
+                <span>SOLUTION 03</span>
+                Loyalty Data Integration
+              </button>
+            </div>
+          </div>
+
+          <div class="prototype-video-viewport" aria-label="Prototype video frame">
+            <div class="prototype-video-crop" id="prototypeScreen">
+              <div class="prototype-placeholder">
+                <div>
+                  <strong>Complex Customization Flow</strong>
+                  <span>Prototype video coming soon.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="document-overlay" id="documentOverlay" aria-hidden="true"></div>
+      <aside class="document-drawer" id="documentDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="documentDrawerTitle">
+        <div class="drawer-header">
+          <div>
+            <h3 class="drawer-title" id="documentDrawerTitle">Document Preview</h3>
+            <p class="drawer-subtitle" id="documentDrawerSubtitle"></p>
+          </div>
+          <button class="drawer-close" id="documentDrawerClose" type="button" aria-label="Close document preview">&times;</button>
+        </div>
+        <div class="drawer-body">
+          <iframe class="document-frame" id="documentFrame" title="Project document preview"></iframe>
+        </div>
+        <div class="drawer-footer">
+          <span>Preview is embedded on this page. Use the fallback if your browser blocks local preview.</span>
+          <span class="drawer-link" id="documentFallbackLink" style="opacity: 0.5;">Open source file (unavailable)</span>
+        </div>
+      </aside>
+
+
+    </main>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const documentButtons = document.querySelectorAll("[data-document-open]");
+      const overlay = document.getElementById("documentOverlay");
+      const drawer = document.getElementById("documentDrawer");
+      const closeButton = document.getElementById("documentDrawerClose");
+      const drawerTitle = document.getElementById("documentDrawerTitle");
+      const drawerSubtitle = document.getElementById("documentDrawerSubtitle");
+      const documentFrame = document.getElementById("documentFrame");
+      const fallbackLink = document.getElementById("documentFallbackLink");
+
+      function openDocument(button) {
+        const title = button.getAttribute("data-doc-title") || "Document Preview";
+        const subtitle = button.getAttribute("data-doc-subtitle") || "";
+        const src = button.getAttribute("data-doc-src") || "";
+        const downloadSrc = button.getAttribute("data-doc-download") || src;
+
+        drawerTitle.textContent = title;
+        drawerSubtitle.textContent = subtitle;
+        documentFrame.src = src;
+        fallbackLink.href = downloadSrc;
+
+        overlay.classList.add("is-visible");
+        drawer.classList.add("is-open");
+        overlay.setAttribute("aria-hidden", "false");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeDocument() {
+        overlay.classList.remove("is-visible");
+        drawer.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden", "true");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        window.setTimeout(function () {
+          if (!drawer.classList.contains("is-open")) {
+            documentFrame.src = "";
+          }
+        }, 280);
+      }
+
+      documentButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          openDocument(button);
+        });
+      });
+
+      if (overlay && closeButton) {
+        overlay.addEventListener("click", closeDocument);
+        closeButton.addEventListener("click", closeDocument);
+      }
+
+      const prototypeButtons = document.querySelectorAll(".prototype-tab");
+      const prototypeScreen = document.getElementById("prototypeScreen");
+      const placeholderTitle = document.getElementById("prototypePlaceholderTitle");
+
+      function getYouTubeId(value) {
+        if (!value) {
+          return "";
+        }
+
+        const trimmed = value.trim();
+        const patterns = [
+          /youtube\.com\/watch\?v=([^&]+)/,
+          /youtube\.com\/embed\/([^?&]+)/,
+          /youtu\.be\/([^?&]+)/,
+          /^([a-zA-Z0-9_-]{11})$/
+        ];
+
+        for (const pattern of patterns) {
+          const match = trimmed.match(pattern);
+          if (match) {
+            return match[1];
+          }
+        }
+
+        return trimmed;
+      }
+
+      function renderPrototype(button) {
+        const title = button.getAttribute("data-prototype-title") || "Prototype Preview";
+        const youtubeId = getYouTubeId(button.getAttribute("data-youtube-id") || "");
+
+        prototypeButtons.forEach(function (item) {
+          item.classList.toggle("is-active", item === button);
+        });
+
+        if (!youtubeId) {
+          prototypeScreen.innerHTML = '<div class="prototype-placeholder"><div><strong>' + title + '</strong><span>Prototype video coming soon.</span></div></div>';
+          return;
+        }
+
+        prototypeScreen.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + youtubeId + '?rel=0&playsinline=1&controls=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      }
+
+      prototypeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          renderPrototype(button);
+        });
+      });
+
+      if (prototypeButtons.length) {
+        renderPrototype(prototypeButtons[0]);
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+          closeDocument();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
