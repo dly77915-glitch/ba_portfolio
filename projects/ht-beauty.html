@@ -166,86 +166,87 @@ layout: null
     </section>
 
 <section id="deliverables" class="py-16 px-6 bg-gray-50 border-b border-gray-200">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Deliverables</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">Business analysis artifacts developed throughout the Software Development Life Cycle (SDLC), demonstrating how business needs are translated into structured documentation, optimized processes, and implementation-ready solutions.</p>
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Deliverables</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Business analysis artifacts developed throughout the SDLC, demonstrating how business needs are translated into structured documentation, optimized processes, and implementation-ready solutions.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div class="text-blue-500 mb-4"><i class="fas fa-file-signature text-3xl"></i></div>
+                <h3 class="font-bold text-gray-900 mb-2">Business Requirement Document (BRD)</h3>
+                <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Business Survey • Process Restructuring</p>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">Conducted requirement gathering and pain-point analysis for HT Beauty Clinic. Documented 33 core functional blocks to transition from a manual "As-Is" process to a fully digitalized "To-Be" workflow, covering everything from CRM lead capture to post-treatment care.</p>
+                <button type="button"
+                    class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+                    data-document-open
+                    data-doc-title="Business Requirement Document (BRD)"
+                    data-doc-subtitle="Business Survey & Process Restructuring"
+                    data-doc-src="{{ '/assets/docs/BRD_HT_Beauty.pdf' | relative_url }}"
+                    aria-label="View BRD Document">
+                    <i class="fas fa-file-pdf mr-2"></i> View Document
+                </button>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="text-blue-500 mb-4"><i class="fas fa-file-signature text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Business Requirements Document (BRD)</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Business Goals • Stakeholder Needs • GAP Analysis</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Captures business objectives, stakeholder expectations, AS-IS assessment, operational pain points, project scope, and prioritized business requirements to establish a clear project foundation before solution design.</p>
-                    <button type="button"
-                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
-                        data-document-open
-                        data-doc-title="Business Requirements Document (BRD)"
-                        data-doc-subtitle="Business Goals • Stakeholder Needs • GAP Analysis"
-                        data-doc-src="{{ '/assets/docs/BRD_HT_Beauty.pdf' | relative_url }}"
-                        aria-label="View Business Requirements Document PDF">
-                        <i class="fas fa-file-pdf mr-2"></i> View Document
-                    </button>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="text-green-500 mb-4"><i class="fas fa-project-diagram text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Business Process Design (BPD)</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">AS-IS • TO-BE • BPMN 2.0</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Documents end-to-end business workflows using BPMN 2.0, including current-state analysis, future-state process redesign, business rules, exception handling, and operational improvement opportunities.</p>
-                    <button type="button"
-                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
-                        data-document-open
-                        data-doc-title="Business Process Design (BPD)"
-                        data-doc-subtitle="AS-IS • TO-BE • BPMN 2.0"
-                        data-doc-src="{{ '/assets/docs/BPD_HT_Beauty.pdf' | relative_url }}"
-                        aria-label="View Business Process Design PDF">
-                        <i class="fas fa-file-pdf mr-2"></i> View Document
-                    </button>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div class="text-green-500 mb-4"><i class="fas fa-chart-bar text-3xl"></i></div>
+                <h3 class="font-bold text-gray-900 mb-2">System Gap Analysis</h3>
+                <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Feasibility • Solution Architecture</p>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">Analyzed 46 system gaps between standard Odoo Community and medical aesthetic regulations. Evaluated feasibility and proposed a solution architecture: leveraging 36.36% standard features to optimize costs while customizing 42.43% to strictly control medical risks.</p>
+                <button type="button"
+                    class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+                    data-document-open
+                    data-doc-title="System Gap Analysis"
+                    data-doc-subtitle="Feasibility & Solution Architecture"
+                    data-doc-src="{{ '/assets/docs/Bang_Phan_Tich_Gap_HT_Beauty.pdf' | relative_url }}"
+                    aria-label="View Gap Analysis Document">
+                    <i class="fas fa-file-pdf mr-2"></i> View Document
+                </button>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div class="text-purple-500 mb-4"><i class="fas fa-file-code text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Functional Requirements Document (FRD)</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Functional Specs • Use Cases • Acceptance Criteria</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Defines detailed functional requirements, user interactions, validation rules, business logic, exception scenarios, and acceptance criteria to support accurate system development.</p>
-                    <button type="button"
-                        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
-                        data-document-open
-                        data-doc-title="Functional Requirements Document (FRD)"
-                        data-doc-subtitle="Functional Specs • Use Cases • Acceptance Criteria"
-                        data-doc-src="{{ '/assets/docs/FRD_HT_Beauty.pdf' | relative_url }}"
-                        aria-label="View Functional Requirements Document PDF">
-                        <i class="fas fa-file-pdf mr-2"></i> View Document
-                    </button>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div class="text-purple-500 mb-4"><i class="fas fa-cogs text-3xl"></i></div>
+    <h3 class="font-bold text-gray-900 mb-2">Functional Requirements Document (FRD)</h3>
+    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Functional Specs • System Workflows</p>
+    <p class="text-gray-600 text-sm mb-4 flex-grow">Translated business needs into actionable functional specifications. Mapped manual "As-Is" processes to specific Odoo system actions. Documented end-to-end system behaviors, detailed user interactions, and validation rules to precisely guide module customization.</p>
+    <button type="button"
+        class="mt-auto inline-flex items-center text-primary font-semibold hover:underline text-sm text-left"
+        data-document-open
+        data-doc-title="Functional Requirements Document (FRD)"
+        data-doc-subtitle="Functional Specs & System Workflows"
+        data-doc-src="{{ '/assets/docs/FRD_HT_Beauty.pdf' | relative_url }}"
+        aria-label="View FRD Document">
+        <i class="fas fa-file-pdf mr-2"></i> View Document
+    </button>
+</div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
-                    <div class="text-orange-500 mb-4"><i class="fas fa-database text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Data Modeling &amp; System Analysis</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">ERD • DFD • Data Dictionary</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Models business data structures and system interactions through Entity-Relationship Diagrams, Data Flow Diagrams, and system analysis artifacts to support solution architecture and implementation.</p>
-                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
+                <div class="text-orange-500 mb-4"><i class="fas fa-database text-3xl"></i></div>
+                <h3 class="font-bold text-gray-900 mb-2">Data Modeling &amp; System Analysis</h3>
+                <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">ERD • DFD • Data Dictionary</p>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">Models business data structures and system interactions through Entity-Relationship Diagrams, Data Flow Diagrams, and system analysis artifacts to support solution architecture and implementation.</p>
+                <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
-                    <div class="text-pink-500 mb-4"><i class="fas fa-pencil-ruler text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Wireframes &amp; UI Prototypes</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">User Flow • Low-Fi • High-Fi</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Illustrates user journeys and interface concepts through wireframes and interactive prototypes to validate business requirements before development.</p>
-                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
+                <div class="text-pink-500 mb-4"><i class="fas fa-pencil-ruler text-3xl"></i></div>
+                <h3 class="font-bold text-gray-900 mb-2">Wireframes &amp; UI Prototypes</h3>
+                <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">User Flow • Low-Fi • High-Fi</p>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">Illustrates user journeys and interface concepts through wireframes and interactive prototypes to validate business requirements before development.</p>
+                <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
+            </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
-                    <div class="text-teal-500 mb-4"><i class="fas fa-clipboard-check text-3xl"></i></div>
-                    <h3 class="font-bold text-gray-900 mb-2">Testing &amp; UAT Documentation</h3>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Test Cases • UAT • Bug Reports</p>
-                    <p class="text-gray-600 text-sm mb-4 flex-grow">Documents business validation activities including User Acceptance Testing, test scenarios, defect tracking, and final business sign-off before deployment.</p>
-                    <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col opacity-85">
+                <div class="text-teal-500 mb-4"><i class="fas fa-clipboard-check text-3xl"></i></div>
+                <h3 class="font-bold text-gray-900 mb-2">Testing &amp; UAT Documentation</h3>
+                <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-3">Test Cases • UAT • Bug Reports</p>
+                <p class="text-gray-600 text-sm mb-4 flex-grow">Documents business validation activities including User Acceptance Testing, test scenarios, defect tracking, and final business sign-off before deployment.</p>
+                <span class="mt-auto text-gray-400 text-sm font-medium"><i class="fas fa-hourglass-half mr-1"></i> File in preparation</span>
             </div>
         </div>
+    </div>
+</section>
 
         <div id="documentDrawerOverlay" class="fixed inset-0 z-50 hidden bg-slate-900/70 opacity-0 transition-opacity duration-300" aria-hidden="true"></div>
 
