@@ -1,5 +1,19 @@
 <footer class="site-footer">
-    <div class="container">
-        <p>&copy; 2026 Dang Ly Phuong Thao. Business Analyst.</p>
+  <div class="site-container site-footer__grid">
+    <div>
+      <p class="eyebrow eyebrow--light">Build with purpose</p>
+      <h2>Let's turn business requirements into working, measurable solutions.</h2>
     </div>
+
+    <div class="site-footer__links" aria-label="Footer links">
+      <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <button type="button" data-cv-open>View CV →</button>
+      <a href="#main-content">Back to top ↑</a>
+    </div>
+  </div>
+
+  <div class="site-container site-footer__bottom">
+    <p>Designed and built by {{ site.author.name }}.</p>
+    <p>© <span data-current-year></span></p>
+  </div>
 </footer>

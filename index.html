@@ -1,209 +1,182 @@
 ---
 layout: default
+title: Business Analyst Portfolio
+description: Phuong Thao's Business Analyst portfolio connecting business requirements, process modeling, and technology execution.
 ---
 
-<div class="container">
+<section class="hero" id="home" aria-labelledby="hero-title">
+  {% include components/hero-video.html %}
+  <div class="site-container hero__inner">
+    <div class="hero__content">
+      <p class="hero__role hero-enter" style="--enter-delay: 0.05s;">Business Analyst</p>
+      <h1 class="hero-enter" id="hero-title" style="--enter-delay: 0.14s;">Hello, I am <span>Phuong Thao.</span></h1>
+      <p class="hero__description hero-enter" style="--enter-delay: 0.25s;">
+        As a Business Analyst, I specialize in requirements elicitation and process mapping. I bridge the gap between business stakeholders and technical teams to ensure technology solutions drive measurable operational value.
+      </p>
+      <div class="hero__actions hero-enter" style="--enter-delay: 0.36s;">
+        <button id="btn-view-cv" class="button button--gold" type="button" data-cv-open>View CV <span aria-hidden="true">→</span></button>
+        <a class="button button--light" href="#projects">View Projects <span aria-hidden="true">→</span></a>
+        <a class="button button--ghost" href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <a class="hero__scroll-cue hero-enter" style="--enter-delay: 0.5s;" href="#about">
+    <span>Scroll to explore</span>
+    <i aria-hidden="true">↓</i>
+  </a>
+</section>
+
+<section class="about-section section" id="about" aria-labelledby="about-heading" style="padding: 6rem 0;">
+  <div class="site-container">
+    <div class="section-heading">
+      <p class="eyebrow" data-reveal>Who I am</p>
+      <h2 id="about-heading" data-reveal>About me</h2>
+    </div>
     
-    <section id="hero" class="hero">
-        <div>
-            <h1>Hello, I am Phuong Thao.</h1>
-            <p>I am a student on the journey to becoming a Business Analyst. My core strengths lie in requirements elicitation, process mapping, and bridging the gap between business stakeholders and technical teams to ensure technology solutions effectively address business and operational needs.</p>
-           <div class="hero-actions">
-                <button id="btn-view-cv" class="btn btn-primary">View CV</button>
-                <a href="#projects" class="btn btn-outline">View Projects</a>
-                <a href="https://www.linkedin.com/in/thao-dang-53026041a/" target="_blank" class="btn btn-outline">LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about-grid">
-        <div class="about-photo-card">
-            <img src="{{ '/assets/images/my-photo.jpg' | relative_url }}" alt="Phuong Thao">
-        </div>
-
-        <div class="about-card">
-            <ul class="about-highlights">
-                <li>
-                    <strong>Education:</strong>
-                    4th-year student majoring in Enterprise Resource Planning at UEH.
-                </li>
-                <li style="display: none;">
-                    <strong>Career Focus:</strong>
-                    E-commerce and Retail Operations.
-                </li>
-                <li>
-                    <strong>Working Mindset:</strong>
-                    I appreciate clarity, work systematically, and always put users and business value at the core when analyzing any tech solutions.
-                </li>
-            </ul>
-        </div>
+    <!-- 2-Column Grid for About Me -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;" data-reveal>
+      <figure class="about-media" style="border-radius: 1rem; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.1); margin: 0;">
+        <img src="{{ '/assets/images/my-photo.jpg' | relative_url }}" alt="Phuong Thao" style="width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/5;">
+      </figure>
+      <div class="about-content">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2.5rem;">
+          <li>
+            <strong style="display: block; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-heading);">Education</strong>
+            <p style="margin: 0; opacity: 0.85; line-height: 1.6; font-size: 1.1rem;">4th-year student majoring in Enterprise Resource Planning at UEH.</p>
+          </li>
+          <li>
+            <strong style="display: block; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-heading);">Working Mindset</strong>
+            <p style="margin: 0; opacity: 0.85; line-height: 1.6; font-size: 1.1rem;">I appreciate clarity, work systematically, and always put users and business value at the core when analyzing any tech solutions.</p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<section id="skills" class="ba-competencies">
-    <h2 class="section-title">Core Competencies</h2>
-
-    <p class="ba-competencies-intro">
-        Business Analysis competencies focused on understanding business problems,
-        modeling workflows, defining clear requirements, and supporting implementation
-        from analysis to user validation.
-    </p>
-
-    <div class="ba-competency-grid">
-
-        <article class="ba-skill-card">
-            <div class="ba-skill-top">
-                <span class="ba-skill-no">01</span>
-                <span class="ba-skill-label">Analysis</span>
-            </div>
-            <h3>Requirement Elicitation & Process Analysis</h3>
-            <p>
-                Gather & elicit stakeholder requirements, analyze workflows, and translate business problems into actionable functional requirements.
-            </p>
-            <div class="ba-tags">
-                <span>Requirement Gathering</span>
-                <span>Elicitation Techniques</span>
-                <span>Gap Analysis</span>
-                <span>Requirements Analysis</span>
-            </div>
-        </article>
-
-        <article class="ba-skill-card">
-            <div class="ba-skill-top">
-                <span class="ba-skill-no">02</span>
-                <span class="ba-skill-label">Modeling</span>
-            </div>
-            <h3>Process Modeling & BA Documentation</h3>
-            <p>
-                Document business processes and system behavior clearly so business users
-                and technical teams can share the same understanding.
-            </p>
-            <div class="ba-tags">
-                <span>BPMN</span>
-                <span>UML</span>
-                <span>Use Case</span>
-                <span>BRD / FRD / FSD</span>
-            </div>
-        </article>
-
-        <article class="ba-skill-card">
-            <div class="ba-skill-top">
-                <span class="ba-skill-no">03</span>
-                <span class="ba-skill-label">Implementation</span>
-            </div>
-            <h3>Implementation Support & Solution Validation</h3>
-            <p>
-                Support the transition from requirements to implementation by validating
-                solution behavior, coordinating feedback, and confirming business fit.
-            </p>
-            <div class="ba-tags">
-                <span>UAT Support</span>
-                <span>Requirement Traceability</span>
-                <span>Change Requests</span>
-                <span>User Training</span>
-            </div>
-        </article>
-
-        <article class="ba-skill-card">
-            <div class="ba-skill-top">
-                <span class="ba-skill-no">04</span>
-                <span class="ba-skill-label">Data Logic</span>
-            </div>
-            <h3>Data & System Thinking</h3>
-            <p>
-                Understand how business data flows across processes and use data logic
-                to support requirement analysis, reporting, and system decisions.
-            </p>
-            <div class="ba-tags">
-                <span>ERD</span>
-                <span>DFD</span>
-                <span>SQL</span>
-                <span>Reporting Logic</span>
-            </div>
-        </article>
-
+<section class="capabilities-section section" id="capabilities" aria-labelledby="capabilities-heading">
+  <div class="tool-marquee" aria-hidden="true">
+    <div class="tool-marquee__track">
+      <span>Figma</span><span>Draw.io</span><span>SQL</span><span>PostgreSQL</span><span>pgAdmin</span><span>Odoo</span><span>SAP SD/MM Basics</span>
+      <span>Figma</span><span>Draw.io</span><span>SQL</span><span>PostgreSQL</span><span>pgAdmin</span><span>Odoo</span><span>SAP SD/MM Basics</span>
     </div>
-
-    <div class="ba-tools-strip">
-        <span class="ba-tools-label">Supporting Tools</span>
-        <div class="ba-tools">
-            <span>Figma</span>
-            <span>Draw.io</span>
-            <span>SQL</span>
-            <span>PostgreSQL</span>
-            <span>pgAdmin</span>
-            <span>Odoo</span>
-            <span>SAP SD/MM Basics</span>
-        </div>
+  </div>
+  
+  <div class="site-container capabilities-section__content">
+    <div class="section-heading section-heading--light">
+      <p class="eyebrow eyebrow--gold" data-reveal>Core Competencies</p>
+      <h2 id="capabilities-heading" data-reveal>Bridging <span>Business & Tech</span></h2>
+      <p data-reveal>Business Analysis competencies focused on understanding business problems, modeling workflows, defining clear requirements, and supporting implementation.</p>
     </div>
+    
+    <div class="pillars-grid">
+      <article class="pillar-card pillar-card--business" data-reveal style="--reveal-delay: 0s;">
+        <div class="pillar-card__number">01</div>
+        <div class="pillar-card__icon" aria-hidden="true">A</div>
+        <h3>Analysis</h3>
+        <p>Gather & elicit stakeholder requirements, analyze workflows, and translate business problems into actionable functional requirements.</p>
+        <ul>
+          <li>Requirement Gathering</li>
+          <li>Elicitation Techniques</li>
+          <li>Gap Analysis</li>
+          <li>Requirements Analysis</li>
+        </ul>
+      </article>
+      
+      <article class="pillar-card pillar-card--design" data-reveal style="--reveal-delay: 0.12s;">
+        <div class="pillar-card__number">02</div>
+        <div class="pillar-card__icon" aria-hidden="true">M</div>
+        <h3>Modeling</h3>
+        <p>Document business processes and system behavior clearly so business users and technical teams can share the same understanding.</p>
+        <ul>
+          <li>BPMN & UML</li>
+          <li>Use Case Modeling</li>
+          <li>BRD / FRD / FSD</li>
+          <li>Process Mapping</li>
+        </ul>
+      </article>
+      
+      <article class="pillar-card pillar-card--tech" data-reveal style="--reveal-delay: 0.24s;">
+        <div class="pillar-card__number">03</div>
+        <div class="pillar-card__icon" aria-hidden="true">I</div>
+        <h3>Implementation</h3>
+        <p>Support the transition from requirements to implementation by validating solution behavior, coordinating feedback, and confirming business fit.</p>
+        <ul>
+          <li>UAT Support</li>
+          <li>Requirement Traceability</li>
+          <li>Change Requests</li>
+          <li>User Training</li>
+        </ul>
+      </article>
+      
+      <article class="pillar-card pillar-card--data" data-reveal style="--reveal-delay: 0.36s;">
+        <div class="pillar-card__number">04</div>
+        <div class="pillar-card__icon" aria-hidden="true">D</div>
+        <h3>Data Logic</h3>
+        <p>Understand how business data flows across processes and use data logic to support requirement analysis, reporting, and system decisions.</p>
+        <ul>
+          <li>ERD & DFD</li>
+          <li>SQL Querying</li>
+          <li>Reporting Logic</li>
+          <li>System Thinking</li>
+        </ul>
+      </article>
+    </div>
+  </div>
 </section>
 
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Odoo ERP System for HT Beauty</h3>
-                <p>Analyzed As-Is/To-Be systems and configured Odoo to resolve 46 operational bottlenecks.</p>
-                <a href="{{ '/projects/ht-beauty.html' | relative_url }}" class="btn btn-outline">View details</a>
-            </div>
-            <div class="project-card">
-                <h3>Tra Anh Ordering Platform</h3>
-                <p>Requirement specification, data architecture design, and UI mockups construction.</p>
-                <a href="{{ '/projects/tra-anh.html' | relative_url }}" class="btn btn-outline">View details</a>
-            </div> 
-        </div>
-    </section>
-
-    <section id="certs">
-        <h2 class="section-title">Certifications</h2>
-        <div class="empty-state-wrapper">
-            <div class="blurred-content">
-                <div class="folder-icon"></div>
-                <div class="folder-icon"></div>
-                <div class="folder-icon"></div>
-            </div>
-            <div class="empty-state-overlay">
-                <div class="empty-message">
-                    <span class="icon">🛠️</span>
-                    <p>Content in progress. I am currently curating the best materials to showcase here. Please check back soon!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="documents">
-        <h2 class="section-title">BA Deliverables</h2>
-        <div class="empty-state-wrapper">
-            <div class="blurred-content">
-                <div>
-                    <div class="folder-icon"></div>
-                    <p>Process Maps</p>
-                </div>
-                <div>
-                    <div class="folder-icon"></div>
-                    <p>Use Cases</p>
-                </div>
-                <div>
-                    <div class="folder-icon"></div>
-                    <p>FSD</p>
-                </div>
-            </div>
-            <div class="empty-state-overlay">
-                <div class="empty-message">
-                    <span class="icon">⏳</span>
-                    <p>Content in progress. I am currently curating the best materials to showcase here. Please check back soon!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<div id="cv-modal" class="modal-overlay">
-        <div class="modal-container">
-            <button id="close-modal" class="close-btn">&times;</button>
-            <h2 class="modal-title section-title" style="margin-bottom: 0; padding-bottom: 5px; font-size: 1.5rem;">My Resume</h2>
-            <iframe src="assets/cv.pdf" class="cv-iframe" title="Phuong Thao CV"></iframe>
-        </div>
+<section class="projects-section section" id="projects" aria-labelledby="projects-heading">
+  <div class="site-container">
+    <div class="section-heading section-heading--split">
+      <div>
+        <p class="eyebrow" data-reveal>Selected work</p>
+        <h2 id="projects-heading" data-reveal>Featured Projects</h2>
+      </div>
+      <p data-reveal>Real-world applications of requirements elicitation, process modeling, and system logic optimization.</p>
     </div>
-</div>
+    
+    <div class="projects-grid">
+      <article class="project-card" data-reveal="left">
+        <div class="project-card__media project-card__media--ht" role="img" aria-label="HT Beauty Clinic project cover placeholder">
+          <span>Odoo ERP</span>
+          <strong>HT Beauty Clinic</strong>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span>Business Analyst</span>
+            <span>ERP Implementation</span>
+          </div>
+          <h3>Odoo ERP System for HT Beauty</h3>
+          <p>Elicited business requirements and analyzed As-Is/To-Be workflows to configure a tailored Odoo ERP solution that resolves clinic operational bottlenecks.</p>
+          <ul class="impact-list">
+            <li>Conducted GAP analysis identifying 46 operational bottlenecks.</li>
+            <li>Modeled process flows for cross-functional alignment.</li>
+            <li>Authored BA documentation and supported system implementation.</li>
+          </ul>
+          <a class="text-link" href="{{ '/projects/ht-beauty/' | relative_url }}">Explore project <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      
+      <article class="project-card" data-reveal="right">
+        <div class="project-card__media project-card__media--tra" role="img" aria-label="Tra Anh digital ordering project cover placeholder">
+          <span>Digital Ordering</span>
+          <strong>Trà Anh</strong>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__meta">
+            <span>Business Analyst</span>
+            <span>F&B Solution</span>
+          </div>
+          <h3>Tra Anh Digital Ordering Platform</h3>
+          <p>Defined requirement specifications and system logic to build a mobile ordering platform that mitigates peak-hour congestion.</p>
+          <ul class="impact-list">
+            <li>Designed data architecture and process logic.</li>
+            <li>Created UI mockups and user flows for seamless customer journeys.</li>
+            <li>Translated business needs into actionable technical requirements.</li>
+          </ul>
+          <a class="text-link" href="{{ '/projects/tra-anh/' | relative_url }}">Explore project <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

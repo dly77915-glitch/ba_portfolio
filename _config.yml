@@ -1,5 +1,42 @@
-title: "Phương Thảo - Business Analyst Portfolio"
-description: "Portfolio của Đặng Lý Phương Thảo - Business Analyst"
+title: "Phuong Thao | Business Analyst"
+description: "Business Analyst portfolio focused on requirement elicitation, process modeling, and delivering impactful digital solutions."
+
+# GitHub Pages project-site URL
 url: "https://dly77915-glitch.github.io"
 baseurl: "/ba_portfolio"
-theme: minima
+repository: "dly77915-glitch/ba_portfolio"
+lang: "en"
+timezone: "Asia/Ho_Chi_Minh"
+
+# Shared profile data used by layouts/includes.
+author:
+  name: "Phuong Thao"
+  role: "Business Analyst"
+  phone_display: "0931 084 252"
+  phone_href: "+84931084252"
+  email: "dly77915@gmail.com"
+  linkedin: "https://www.linkedin.com/in/thao-dang-53026041a/"
+
+# Project case studies stored in _projects/*.md.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - README_IMPLEMENTATION.md
+  - DEPLOY_GITHUB_PAGES.md
+  - ASSET_MAP.md
+  - .DS_Store
+  - .jekyll-cache
+  - .sass-cache
