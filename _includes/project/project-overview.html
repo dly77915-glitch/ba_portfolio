@@ -1,0 +1,45 @@
+<section class="project-section project-section--light" id="overview">
+  <div class="project-container">
+    <div class="project-heading project-heading--split" data-project-reveal>
+      <div>
+        <p class="project-kicker">Overview</p>
+        <h2>{{ page.snapshot_heading }}</h2>
+      </div>
+      <p>{{ page.snapshot_intro }}</p>
+    </div>
+
+    <div class="snapshot-grid">
+      {% for item in page.snapshot %}
+        <article class="snapshot-card" data-project-reveal data-project-delay="{{ forloop.index0 | times: 70 }}">
+          <span class="snapshot-card__number">0{{ forloop.index }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if page.demo.visible %}
+  <section class="project-section project-section--ink project-demo" id="project-demo">
+    <div class="project-container">
+      <div class="project-heading project-heading--split project-heading--light" data-project-reveal>
+        <div>
+          <p class="project-kicker project-kicker--gold">{{ page.demo.kicker }}</p>
+          <h2>{{ page.demo.title }}</h2>
+        </div>
+        <p>{{ page.demo.description }}</p>
+      </div>
+
+      <div class="project-video project-video--wide" data-project-reveal>
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/{{ page.demo.youtube_id }}?rel=0&playsinline=1&controls=1"
+          title="{{ page.demo.video_title }}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+{% endif %}

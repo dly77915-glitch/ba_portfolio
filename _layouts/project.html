@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="case-study case-study--{{ page.project_key | default: page.slug }}">
+  {% include project/project-hero.html %}
+  {% include project/project-subnav.html %}
+  {% include project/project-overview.html %}
+  {% include project/project-role.html %}
+  {% include project/project-solutions.html %}
+
+  {% if page.evidence_enabled %}
+    {% include project/project-evidence.html %}
+  {% endif %}
+
+  {% include project/project-impact.html %}
+  {% include project/project-navigation.html %}
+  {% include project/evidence-drawer.html %}
+</article>

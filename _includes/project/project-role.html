@@ -1,0 +1,18 @@
+<section class="project-section project-section--soft" id="role">
+  <div class="project-container">
+    <div class="project-heading" data-project-reveal>
+      <p class="project-kicker">{{ page.role_kicker }}</p>
+      <h2>{{ page.role_title }}</h2>
+      <p>{{ page.role_intro }}</p>
+    </div>
+
+    <article class="ownership-panel ownership-panel--wide" data-project-reveal>
+      <p class="panel-label">What I owned</p>
+      <ul>
+        {% for item in page.role_ownership %}
+          <li><span aria-hidden="true">✓</span><p>{{ item }}</p></li>
+        {% endfor %}
+      </ul>
+    </article>
+  </div>
+</section>

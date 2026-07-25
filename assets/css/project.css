@@ -491,3 +491,49 @@
   .ecosystem-visual__orbit--two,.ecosystem-node,.ecosystem-visual__pulse,.ordering-steps li,.ordering-progress .is-active { animation: none !important; }
   .js [data-project-reveal] { opacity: 1; transform: none; transition: none; }
 }
+
+/* Sticky in-page section navigation (BA simplified case-study layout) */
+.project-subnav {
+  position: sticky;
+  top: var(--header-height, 76px);
+  z-index: 900;
+  background: rgba(255, 255, 255, .92);
+  border-bottom: 1px solid var(--project-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.project-subnav__inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 14px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.project-subnav__inner::-webkit-scrollbar { display: none; }
+.project-subnav__label {
+  flex-shrink: 0;
+  color: var(--project-muted);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.project-subnav a {
+  flex-shrink: 0;
+  color: var(--project-ink);
+  opacity: .62;
+  font-size: .86rem;
+  font-weight: 720;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: opacity .2s ease, color .2s ease;
+}
+.project-subnav a:hover { opacity: 1; }
+.project-subnav a.is-active { opacity: 1; color: var(--project-blue); }
+
+.ownership-panel--wide { max-width: 760px; }
+
+@media (max-width: 720px) {
+  .project-subnav__inner { gap: 18px; }
+}
